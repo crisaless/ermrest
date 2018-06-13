@@ -1,0 +1,37 @@
+site_name: ERMrest API Documentation
+site_description: API documentation for ERMrest codebase in the DERIVA ecosystem.
+theme: readthedocs
+#theme_dir: 'readthedocs_custom'
+#theme_dir: 'readthedocshm'
+#site_favicon: favicon.ico
+site_dir: '_site'
+
+pages:
+- Welcome to the documentation: index.md
+- User Docs:
+    - Installing on CentOS 7: user-doc/install-centos7.md
+    - Installing on Ubuntu 12.04: user-doc/install-ubuntu1204.md
+    - ERMrest Access Control: user-doc/acls.md
+    - Row-Level Authorization: user-doc/row-level-security.md
+    - Performance Tuning: user-doc/tuning.md
+    - Model Annotation: user-doc/annotation.md
+    - ermrest-registry-purge: user-doc/ermrest-registry-purge.md
+    - Chado Vocabulary Patterns: user-doc/Chado-patterns.md
+- ERMrest API:
+    - Guide to the ERMrest API: api-docs/index.md
+    - ERMrest Model Resource Naming: api-docs/model/naming.md
+    - ERMrest Model Operations: api-docs/model/rest.md
+    - ERMrest Data Resource Naming: api-docs/data/naming.md
+    - ERMrest Data Operations: api-docs/data/rest.md
+    - ERMrest Catalog Operations: api-docs/rest-catalog.md
+
+
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition:
+
+copyright: Copyright &copy; 2018 <a href="http://github.com/informatics-isi-edu/ermrest">ERMrest Project</a>.
+
+#extra:
+#  support: contact@partners.org

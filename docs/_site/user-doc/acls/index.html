@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ERMrest Access Control - ERMrest API Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ERMrest Access Control";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> ERMrest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Welcome to the documentation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Docs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install-centos7/">Installing on CentOS 7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">ERMrest Access Control</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ermrest-access-control">ERMrest Access Control</a></li>
+                
+                    <li><a class="toctree-l4" href="#scope-of-use-cases-to-address">Scope of Use Cases to Address</a></li>
+                
+                    <li><a class="toctree-l4" href="#core-concepts">Core Concepts</a></li>
+                
+                    <li><a class="toctree-l4" href="#technical-reference">Technical Reference</a></li>
+                
+                    <li><a class="toctree-l4" href="#access-decision-introspection">Access Decision Introspection</a></li>
+                
+                    <li><a class="toctree-l4" href="#usage-scenarios">Usage Scenarios</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../row-level-security/">Row-Level Authorization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tuning/">Performance Tuning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../annotation/">Model Annotation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>ERMrest API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">ERMrest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User Docs &raquo;</li>
+        
+      
+    
+    <li>ERMrest Access Control</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ermrest-access-control">ERMrest Access Control<a class="headerlink" href="#ermrest-access-control" title="Permanent link"></a></h1>
+<h2 id="scope-of-use-cases-to-address">Scope of Use Cases to Address<a class="headerlink" href="#scope-of-use-cases-to-address" title="Permanent link"></a></h2>
+<p>The ERMrest resource hierarchy supports a rich set of possible
+resource operations. We intend to provide fine-grained control of
+these operations, differentiating rights of one user from another in a
+shared system:</p>
+<ol>
+<li>Make some content invisible<ul>
+<li>An entire catalog</li>
+<li>An entire schema</li>
+<li>An entire table</li>
+<li>An entire column of a table</li>
+<li>Some rows of a table (as if row does not exist)</li>
+<li>Some fields of some rows of a table (as if the value is NULL)</li>
+</ul>
+</li>
+<li>Prevent modification of some content<ul>
+<li>Access control policy</li>
+<li>Table structure</li>
+<li>Table constraints</li>
+<li>Row insertion</li>
+<li>Row modification</li>
+<li>Row deletion</li>
+<li>Field modification (can change parts of row but not all parts)</li>
+<li>Value expression (can apply some values but not others in a given field)</li>
+</ul>
+</li>
+<li>Delegate some rights within a community<ul>
+<li>Authorize additional owners for sub-resources (can't suppress/mask parent owners from sub-resources)</li>
+<li>~~Delegate management of specific table's structure and constraints~~</li>
+<li>Delegate creation of new schema (while protecting other schemas)</li>
+<li>Delegate creation of new table (while protecting other tables)</li>
+</ul>
+</li>
+<li>Make sure simple policies are still simple to manage<ul>
+<li>Entire catalog visible to one group</li>
+<li>Entire catalog data mutable by one group</li>
+<li>Entire catalog model managed by one group</li>
+</ul>
+</li>
+</ol>
+<h3 id="complications">Complications<a class="headerlink" href="#complications" title="Permanent link"></a></h3>
+<p>Controlling visibility is complicated, particularly when done to the
+extent desired by some use cases we've observed.</p>
+<ol>
+<li>Most forms of access depend on other access<ul>
+<li>Must see model to make sense of data APIs</li>
+<li>Must see data to make use of data modification APIs</li>
+<li>Must see related data to make sense of reference constraints</li>
+<li>Must see policy to make sense of what access mechanisms are available</li>
+</ul>
+</li>
+<li>Reference constraints can expose "hidden" data<ul>
+<li>Rows can be hidden in a domain table's policy</li>
+<li>Referring rows might still be visible due to a referring table's more open policy</li>
+<li>Presence of hidden domain data is revealed</li>
+</ul>
+</li>
+<li>Integrity constraints can expose "hidden" columns<ul>
+<li>A hidden column will receive default values on insert</li>
+<li>A default expression is not guaranteed to satisfy integrity constraints</li>
+<li>The conflict error will reveal information about the hidden column<ul>
+<li>That a column with this name exists</li>
+<li>What the default value looks like</li>
+<li>What kind of constraint is violated by the default value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>We will initially require policy administrators to reconcile most of
+these problems by forming well coordinated schemas and policies. In
+some cases, we may be able to improve usability by having the system
+automatically detect conflicts and/or reconcile them?</p>
+<h2 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link"></a></h2>
+<h3 id="catalog-resource-hierarchy">Catalog Resource Hierarchy<a class="headerlink" href="#catalog-resource-hierarchy" title="Permanent link"></a></h3>
+<p>Policy will be expressed over the hierarchical catalog model, with
+policies attached to specific resources in the following model
+hierarchy (already present in ERMrest catalog introspection):</p>
+<ul>
+<li>Catalog<ul>
+<li>Schema<ul>
+<li>Table<ul>
+<li>Column</li>
+<li>Constraint</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="access-modes">Access Modes<a class="headerlink" href="#access-modes" title="Permanent link"></a></h3>
+<p>A number of distinct access modes are defined such that permission can
+be granted or denied for each mode separately. Some modes are short-hand
+for a combination of distinct modes, where a general level of access
+can be further sub-divided into very specific scenarios you might control
+separately:</p>
+<ul>
+<li>Own model element (can do everything)<ul>
+<li>Create new child model element</li>
+<li>Enumerate existing model element</li>
+<li>Write data (can make any data change)<ul>
+<li>Reference to key</li>
+<li>Insert new data</li>
+<li>Modify existing data</li>
+<li>Delete existing data</li>
+</ul>
+</li>
+<li>Select existing data</li>
+</ul>
+</li>
+</ul>
+<p>Ownership is not quite an access mode but convenient to think about as
+the superior mode to all other modes.</p>
+<p>The precise meaning of some data access modes varies by resource type:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Table</th>
+<th>Column</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert</td>
+<td>Create new row</td>
+<td>Set value during row insert</td>
+<td>Make reference to key (during row insert)</td>
+</tr>
+<tr>
+<td>Update</td>
+<td>Modify row</td>
+<td>Replace value</td>
+<td>Make reference to key (during row update)</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Remove row</td>
+<td>Reset to default value</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Select</td>
+<td>Observe/detect row</td>
+<td>Observe/detect value</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p>Foreign key reference resources offer control of value expression:
+rather than limiting what row or field can change, they can limit what
+values are allowed to be placed into a field. They complement the row
+and column-level access controls which can only consider the current
+values of data rather than the proposed new value.</p>
+<h3 id="policy-scoping-and-resource-dependencies">Policy Scoping and Resource Dependencies<a class="headerlink" href="#policy-scoping-and-resource-dependencies" title="Permanent link"></a></h3>
+<p>A policy attached to a resource will govern access to that
+resource. Because many forms of access depend on multiple resources, a
+complete request will be granted or denied based on the conjunction of
+policies governing each resource involved in the request.</p>
+<p>For example:
+- Joined sets can only be viewed if all involved data can be viewed.
+- Data can only be viewed if the enclosing table is visible.
+- A table can only be accessed if its enclosing schema is visible.
+- A schema can only be access if its enclosing catalog is visible.
+- A column can only be modified if its governing reference constraints allow the new value.
+- A key constraint is only visible if the columns it governs are selectable.
+- A foreign key constraint is only visible if the columns it governs are selectable.</p>
+<p>The last two dependencies above are more strict than necessary.  A
+constraint can be well-defined if its constituent columns are
+enumerable. But, in practice most clients cannot do anything useful
+with the constraint unless it can also see the data, and the presence
+of the useless constraint would only confuse most model-driven clients.</p>
+<h3 id="data-dependent-policies">Data-Dependent Policies<a class="headerlink" href="#data-dependent-policies" title="Permanent link"></a></h3>
+<p>Some, but not all, fine-grained access decisions involve data values.
+Model-level Access Control Lists (ACLs) support <em>data-independent</em>
+decisions, i.e. granting access to all rows of a table uniformly.
+Dynamic ACL bindings support <em>data-dependent</em> decisions, i.e. granting
+access to specific rows of a table.</p>
+<p>Data-dependent policies can grant more selective rights to a client
+that would not be possible with a static policy. The decision process
+depends on the configured policy:</p>
+<ol>
+<li>A data-access request is not well-formed if it depends model elements that are invisible to the client.</li>
+<li>Data-visibility policies determine whether a request is allowed:<ul>
+<li>If data-independent policies permit an access, it is allowed</li>
+<li>If data-dependent policies permit an access, it is allowed</li>
+<li>If neither, it is denied</li>
+</ul>
+</li>
+</ol>
+<p>In practice, this means that ERMrest can statically solve some policy
+decisions and make a decision without investigating actual data
+values. But, in the worst case, it needs to include dynamic policy
+checks to decide if a particular access is allowed or denied.</p>
+<p>When data-dependent data viewing policies are active, the effective
+result set is <em>filtered</em> by the visibility policy. When only static
+viewing policies are in effect, the request will be denied rather than
+returning an empty result set.</p>
+<h3 id="policy-inheritance-and-implication">Policy Inheritance and Implication<a class="headerlink" href="#policy-inheritance-and-implication" title="Permanent link"></a></h3>
+<p>A resource owner <strong>always owns all sub-resources</strong>. Any sub-resource
+ownership policy can only extend the privilege to more clients but can
+never block the owners <em>inherited</em> from the enclosing resource.</p>
+<p>Similarly, a more general access right <strong>always implies all
+sub-rights</strong>. Any sub-mode policy can extend the privilege to more
+clients but can never block the parent mode. For example, a client
+with "data write" privileges also has "data insert" privileges, even
+if the an explicit "data insert" policy is empty on the same resource.</p>
+<p>For non-ownership policies, a locally unconfigured (<code>null</code>) policy on
+a sub-resource means the policy will be inherited from the enclosing
+resource. However, any other value including an empty policy (<code>[]</code>)
+will <em>override</em> the inherited policy for that access mode. Thus,
+lesser privileges may be selectively blocked on specific
+sub-resources.</p>
+<ul>
+<li>A local policy can <em>restrict</em> access compared to the enclosing resource<ul>
+<li>One table is read-only in an otherwise read-write schema</li>
+<li>One column is hidden in an otherwise read-write table</li>
+<li>But ownership can never be restricted in sub-resources</li>
+</ul>
+</li>
+<li>A local policy can <em>broaden</em> access compared to the enclosing resource<ul>
+<li>One table is writable in an otherwise read-only schema</li>
+<li>One column is mutable in an otherwise read-only table</li>
+<li>Ownership can be extended to more parties on sub-resources</li>
+</ul>
+</li>
+<li>A more specific access mode can be <em>extended</em> to more clients<ul>
+<li>One table is writable by a curator group, and another group can only insert new rows</li>
+<li>One column is writable by a curator group, and another group can only set values during row insertion</li>
+<li>But a curator group with general write access can not be denied row insert access</li>
+</ul>
+</li>
+<li>But, access decisions still involve resource dependencies<ul>
+<li>An invisible catalog hides all schemas inside it</li>
+<li>An invisible schema hides all tables inside it</li>
+<li>An invisible table hides all columns inside it</li>
+</ul>
+</li>
+</ul>
+<h3 id="model-level-acls">Model-level ACLs<a class="headerlink" href="#model-level-acls" title="Permanent link"></a></h3>
+<p>ACLs are distributed throughout the hierarchical model of the catalog.</p>
+<ol>
+<li>The predefined <em>name</em> of each ACL identifies the type of access governed.</li>
+<li>The <em>resource</em> to which the ACL is attached identifies the scope of the access governed.</li>
+<li>The <em>content</em> of each ACL is a list of disjunctive matching choices which may include the wildcard <code>*</code> matching any client.</li>
+</ol>
+<h4 id="catalog-acls">Catalog ACLs<a class="headerlink" href="#catalog-acls" title="Permanent link"></a></h4>
+<p>A catalog-level ACL describes what access to permit on the whole
+catalog. Catalogs do not inherit ACLs from elsewhere, so an
+unconfigured catalog ACL is not possible.</p>
+<p>During catalog creation the <em>owner</em> defaults to the requesting
+client. Other ACLs are set to empty <code>[]</code> if not otherwise specified in
+the request.</p>
+<p>For catalogs and all other ERMrest resources described below, it is
+impossible for a client to create or manage a resource while
+disclaiming ownership in the request. They may set the ownership more
+broadly, e.g. to a group for which they are a member, rather than
+listing their client ID as the sole owner. But, they can never
+configure a owner ACL which would prevent them from being an owner at
+the end of the request. The only way to transfer resource ownership is
+to add an additional owner, and then have that other owner strip the
+original owner identity from the owner ACL. Alternatively, ownership
+can be assigned to a particular owners group and then the group
+membership can fluctuate due to external management without changing
+the ERMrest ACL content.</p>
+<h4 id="schema-acls">Schema ACLs<a class="headerlink" href="#schema-acls" title="Permanent link"></a></h4>
+<p>A schema-level ACL describes what access to permit on the whole
+schema. When not configured locally, the effective schema-level ACL is
+inherited from the catalog.</p>
+<p>During schema creation, the <em>owner</em> defaults to the requesting client
+or to <code>null</code> if the client is also an owner of the catalog at the time
+of creation; all other schema ACLs are set to <code>null</code> if not otherwise
+specified in the request.</p>
+<h4 id="table-acls">Table ACLs<a class="headerlink" href="#table-acls" title="Permanent link"></a></h4>
+<p>A table-level ACL describes what access to permit on the whole
+table. When not configured locally, the effective table-level ACL is
+inherited from the schema.</p>
+<p>During table creation, the <em>owner</em> defaults to the requesting client
+or to <code>null</code> if the client is also an owner of the table at the time
+of creation; all other table ACLs are set to <code>null</code> if not otherwise
+specified in the request.</p>
+<p><a href="#dynamic-table-acls">Dynamic table-level ACL bindings</a> can augment
+table-level ACLs to enable access to only a subset of data rows.  The
+presence of dynamic ACL bindings for data retrieval access modes
+suppresses a <code>403 Forbidden</code> response which would otherwise be
+generated in the absence of a static ACL granting read access;
+instead, a <code>200 OK</code> response is generated where any denied row is
+absent from the result set.</p>
+<p>All static and dynamic table ACLs are disjunctively considered when
+deciding row access. Any access denied decision for data modifying
+requests will continue to raise a <code>403 Forbidden</code> response.</p>
+<h4 id="column-acls">Column ACLs<a class="headerlink" href="#column-acls" title="Permanent link"></a></h4>
+<p>A column-level ACL describes what access to permit on the whole
+column. When not configured locally, the effective column-level ACL is
+inherited from the table.</p>
+<p>Columns are considered part of the enclosing table resource and do not
+have separable ownership. Column ACLs are set to <code>null</code> if not
+otherwise specified in the request.</p>
+<p><a href="#dynamic-column-acls">Dynamic column ACL bindings</a> can augment
+column-level ACLs to enable access to only a subset of data fields in
+this column.  The presence of dynamic ACL bindings for data retrieval
+access modes suppresses a <code>403 Forbidden</code> response which would
+otherwise be generated in the absence of a static ACL granting read
+access; instead, a <code>200 OK</code> response is generated where any denied
+field is replaced with a NULL value.</p>
+<h4 id="reference-acls">Reference ACLs<a class="headerlink" href="#reference-acls" title="Permanent link"></a></h4>
+<p>A reference-level ACL describes whether to permit foreign key
+references to be expressed.</p>
+<p>Reference ACLs are set to <code>["*"]</code> if not otherwise specified in the
+request.  In practice, reference ACLs are less often restricted and so
+this default simplifies common configurations. A model which needs to
+restrict expression of foreign keys SHOULD explicitly override the
+default ACLs; to completely disable expression of foreign keys, the
+reference ACL set <code>{"insert": [], "update": []}</code> MAY be used.</p>
+<p>Reference constraints are considered part of the enclosing table
+resource and do not have separable ownership.</p>
+<p><a href="#dynamic-reference-acls">Dynamic reference ACL bindings</a> can augment
+reference ACLs to enable expression of only a subset of data in a
+column governed by that reference constraint. These ACLs are actually
+managed on foreign key reference constraints, but their effect is to
+limit what new values can be expressed in the foreign key's
+constituent columns.</p>
+<h3 id="dynamic-acl-bindings">Dynamic ACL Bindings<a class="headerlink" href="#dynamic-acl-bindings" title="Permanent link"></a></h3>
+<p>Dynamic ACL bindings configure sources of ACL content associated with
+each individual tuple or datum, i.e. a query which projects
+user attributes out of the data catalog itself:</p>
+<ol>
+<li>The predefined <em>type</em> of each ACL binding identifies the mode of access governed.</li>
+<li>An arbitrary <em>name</em> of each ACL binding facilitates subsequent management tasks on the policy.</li>
+<li>The <em>resource</em> to which the ACL binding is attached identifies the scope of the access governed.</li>
+<li>The <em>projection</em> of each ACL binding describes how to retrieve ACL content.</li>
+</ol>
+<p>ACL binding projections are a form of ERMrest attribute query in which
+the query path and projection syntax is specified without the base
+table instance. The base table instance is inferred from the resource
+scope of the binding.</p>
+<p>It is the responsibility of the data modeler to create self-consistent
+policies. For example, a dynamic ACL binding is only effective for
+access control if the ACL storage itself is protected from unwanted
+changes. Because the ACL storage is within the database and subject to
+data modification APIs, appropriately restrictive policies must be
+defined to protect the stored ACL content.</p>
+<h3 id="dynamic-defaults">Dynamic Defaults<a class="headerlink" href="#dynamic-defaults" title="Permanent link"></a></h3>
+<p>TBD. Provide some remotely manageable mechanism to do basic
+provenance-tracking idioms where we currently need to use SQL
+triggers?  I.e. store a client identity, client object, or some data
+determined indirectly via a query constrained by client attributes?</p>
+<h4 id="dynamic-table-acls">Dynamic Table ACLs<a class="headerlink" href="#dynamic-table-acls" title="Permanent link"></a></h4>
+<p>A table-level ACL binding describes how to retrieve ACLs which govern
+access to rows of a table.</p>
+<ul>
+<li>The base table for the projection is the bound table itself.<ul>
+<li>ACLs can be stored in columns of the table itself</li>
+<li>ACLs can be stored in related entities</li>
+</ul>
+</li>
+<li>Governed access modes cover whole-entity access:<ul>
+<li>Row visibility (invisible rows are filtered from results)</li>
+<li>Row writing<ul>
+<li>Row update</li>
+<li>Row delete</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="dynamic-column-acls">Dynamic Column ACLs<a class="headerlink" href="#dynamic-column-acls" title="Permanent link"></a></h4>
+<p>A column-level ACL binding describes how to retrieve ACLs which govern
+access to fields within rows of a table.</p>
+<ul>
+<li>The base table for the projection is the enclosing table resource for the bound column.<ul>
+<li>ACLs can be stored in sibling columns of the same table</li>
+<li>ACLs can be stored in related entities</li>
+</ul>
+</li>
+<li>Governed access modes cover individual field (table cell) access:<ul>
+<li>Field visibility (invisible fields are replaced with NULLs)</li>
+<li>Field writing<ul>
+<li>Field targeted during row updates</li>
+<li>Field cleared by attribute deletes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Column-level dynamic ACLs are not involved in row insertion nor
+deletion decisions.</p>
+<p>As a convenience, columns inherit the dynamic ACL bindings of their
+table. Thus, if no column-level ACL bindings are specified, the column
+allows whatever operation the table would allow for that row. The
+column-level policy MAY apply a special binding value of <code>false</code> to
+suppress an ACL binding inherited from the table under the same name.</p>
+<h4 id="dynamic-reference-acls">Dynamic Reference ACLs<a class="headerlink" href="#dynamic-reference-acls" title="Permanent link"></a></h4>
+<p>A reference-level ACL binding describes how to retrieve ACLs which
+govern expression of data within fields which are subject to a foreign
+key reference constraint.</p>
+<ul>
+<li>The base table for the projection is the referenced table resource, i.e. the domain table for the constraint.<ul>
+<li>ACLs can be stored in sibling columns of the referenced key</li>
+<li>ACLs can be stored in related entities of the referenced entities</li>
+</ul>
+</li>
+<li>Governed access modes cover individual domain datum access:<ul>
+<li>Value writing during row insertion or update</li>
+</ul>
+</li>
+</ul>
+<p>No access control distinction is allowed between reference value
+insertion during row creation and reference value insertion during row
+update.</p>
+<p>Reference-level dynamic ACLs are not involved in row deletion
+decisions nor in default value expression during row creation.</p>
+<h2 id="technical-reference">Technical Reference<a class="headerlink" href="#technical-reference" title="Permanent link"></a></h2>
+<h3 id="available-static-acl-names">Available Static ACL Names<a class="headerlink" href="#available-static-acl-names" title="Permanent link"></a></h3>
+<p>Most of the previously described <a href="#access-modes">access modes</a> have a
+corresponding static ACL name associated with them. Some model access rights
+are not separately controlled and instead require full ownership
+rights. This might change in future revisions.</p>
+<p>Because more general access mode rights imply lesser access mode
+rights and sub-resources inherit ACLs, brevity in policy
+configurations can be achieved:
+- A small set of owners need not be repeated in other ACLs
+- Less privileged roles are mentioned only in their corresponding lesser ACLs
+- Sub-resource ACLs can be set to <code>null</code> unless local overrides are needed</p>
+<p>Available ACL names and applicability to specific model elements:</p>
+<table>
+<thead>
+<tr>
+<th>ACL Name</th>
+<th>Catalog</th>
+<th>Schema</th>
+<th>Table</th>
+<th>Column</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td>all access</td>
+<td>all access</td>
+<td>all access</td>
+<td>N/A <em>note1</em></td>
+<td>N/A <em>note1</em></td>
+</tr>
+<tr>
+<td>create</td>
+<td>add schema</td>
+<td>add table</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>select</td>
+<td><em>note2</em></td>
+<td><em>note2</em></td>
+<td>observe row</td>
+<td>observe value</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>insert</td>
+<td><em>note2</em></td>
+<td><em>note2</em></td>
+<td>add row</td>
+<td>set value <em>note3</em></td>
+<td>set value <em>note3</em></td>
+</tr>
+<tr>
+<td>update</td>
+<td><em>note2</em></td>
+<td><em>note2</em></td>
+<td>change row</td>
+<td>set value <em>note3</em></td>
+<td>set value <em>note3</em></td>
+</tr>
+<tr>
+<td>write</td>
+<td><em>note2</em></td>
+<td><em>note2</em></td>
+<td>all data access</td>
+<td>set value <em>note3</em></td>
+<td>set value <em>note3</em></td>
+</tr>
+<tr>
+<td>delete</td>
+<td><em>note2</em></td>
+<td><em>note2</em></td>
+<td>delete row</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>enumerate</td>
+<td>introspect</td>
+<td>introspect</td>
+<td>introspect</td>
+<td>introspect</td>
+<td>introspect</td>
+</tr>
+</tbody>
+</table>
+<p>When a new schema is added to a catalog, or a new table is added to a
+schema, the requesting client becomes the owner of the newly added
+element.</p>
+<p>Notes:
+- <code>N/A</code>: The named ACL is not supported on this kind of model element.
+- <em>note1</em>: Columns and references are considered part of the table and so cannot have local ownership settings.
+- <em>note2</em>: Data access ACLs on catalogs and schemas only serve to set inherited access policies for the tables which are sub-resources within those containers respectively. These only have effect if the table does not have a locally configured policy for the same named ACL, and they grant no special access to the catalog or schema itself.
+- <em>note3</em>: The insert/update ACLs on columns and references configure whether values can be supplied during that type of operation on the containing row.</p>
+<p>As described previously, some access rights imply other rights:</p>
+<table>
+<thead>
+<tr>
+<th>ACL Name</th>
+<th>Implies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enumerate</td>
+<td></td>
+</tr>
+<tr>
+<td>create</td>
+<td>enumerate</td>
+</tr>
+<tr>
+<td>select</td>
+<td>enumerate</td>
+</tr>
+<tr>
+<td>insert</td>
+<td>enumerate</td>
+</tr>
+<tr>
+<td>update</td>
+<td>select, enumerate</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>select, enumerate</td>
+</tr>
+<tr>
+<td>write</td>
+<td>insert, update, delete, select, enumerate</td>
+</tr>
+<tr>
+<td>owner</td>
+<td>create, insert, update, delete, select, enumerate</td>
+</tr>
+</tbody>
+</table>
+<p>Ownership is inherited even if a sub-resource specifies a locally
+configured owner ACL. The effective owner policy is the disjunction of
+inherited owner and local owner policies. Other locally configured ACLs
+override their respective inherited ACL and so may grant fewer rights
+than would be granted with the inherited policy.</p>
+<h3 id="acl-representation">ACL Representation<a class="headerlink" href="#acl-representation" title="Permanent link"></a></h3>
+<p>The data-independent ACLs are encoded in an <code>"acls"</code> sub-resource of the
+governed resource. This is a hash-map keyed by ACL name. For example,
+a schema resource has a canonical representation as in the following
+example:</p>
+<pre><code>{
+  "schema_name": "My Schema",
+  "comment": "The purpose of My Schema is...",
+  "annotations": ...,
+  "tables": ...,
+  "acls": {
+    "owner": ["some/user/URI"],
+    "select": ["*"]
+  }
+}
+</code></pre>
+<p>This example has locally configured ACLs for the schema owner and
+permits public access to enumerate the schema and select data, but
+inherits other ACLs from the enclosing catalog. For brevity, ACL names
+with <code>null</code> configuration are omitted from the canonical
+representation. Specifying each such ACL name with a literal <code>null</code>
+has the same meaning.</p>
+<h3 id="acl-management">ACL Management<a class="headerlink" href="#acl-management" title="Permanent link"></a></h3>
+<p>The ACL sub-resources are managed by a simple REST API. They can be
+embedded in the enclosing resource description during resource update
+or resource retrieval. For ACL management on existing resources, a
+sub-API is supported on each resource to address one ACL by name.</p>
+<ul>
+<li><code>.../acl</code>: collection of all named ACLs</li>
+<li>GET: retrieve ACL collection</li>
+<li>PUT: replace all ACLs in collection</li>
+<li>DELETE: unconfigure all ACLs in collection</li>
+<li><code>.../acl/name</code>: individually named ACL</li>
+<li>GET: retrieve one ACL</li>
+<li>PUT: replace one ACL</li>
+<li>DELETE: unconfigure one ACL</li>
+</ul>
+<p>An ACL collection is the sub-resource described previously: an object
+keyed by ACL name where unconfigured ACLs are omitted. Each individual
+ACL is a JSON array of strings.</p>
+<table>
+<thead>
+<tr>
+<th>Governed Resource</th>
+<th>Example for ACL name <code>A</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catalog</td>
+<td>/catalog/N/acl/A</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>/catalog/N/schema/S/acl/A</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>/catalog/N/schema/S/table/T/acl/A</td>
+</tr>
+<tr>
+<td>Column</td>
+<td>/catalog/N/schema/S/table/T/column/C/acl/A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="available-dynamic-acl-types">Available Dynamic ACL Types<a class="headerlink" href="#available-dynamic-acl-types" title="Permanent link"></a></h3>
+<p>Some of the previously described <a href="#access-modes">access modes</a> have a
+corresponding dynamic ACL type associated with them. Because dynamic ACLs
+are for data-dependent access, they have more restrictive applicability:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Mode</th>
+<th>Implies</th>
+<th>Supported Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td>Write data</td>
+<td>insert, update, delete, select</td>
+<td>table, column, reference</td>
+</tr>
+<tr>
+<td>insert</td>
+<td>Insert data</td>
+<td></td>
+<td>reference</td>
+</tr>
+<tr>
+<td>update</td>
+<td>Modify data</td>
+<td></td>
+<td>table, column, reference</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>Delete data</td>
+<td></td>
+<td>table, column</td>
+</tr>
+<tr>
+<td>select</td>
+<td>View data</td>
+<td></td>
+<td>table, column</td>
+</tr>
+</tbody>
+</table>
+<p>Table and column-level dynamic ACLs are only applicable to access
+requests against existing database content. Insertion of new rows can
+only be granted by a static policy. However, reference-level dynamic
+ACLs can grant or deny the ability to specify specific foreign keys 
+even during row insertion.</p>
+<p>Dynamic data rights do not imply model access. Model access must be
+determined in a data-independent manner in order to even pose an
+access request which might be granted by dynamic access rights.</p>
+<h3 id="dynamic-acl-binding-representation">Dynamic ACL Binding Representation<a class="headerlink" href="#dynamic-acl-binding-representation" title="Permanent link"></a></h3>
+<p>The data-dependent ACL bindings are encoded in an <code>"acl_bindings"</code>
+sub-resource of the governed resource. This is a hash-map keyed by ACL
+binding name. For example, a table resource has a canonical
+representation as in the following example:</p>
+<pre><code>{
+  "schema_name": "My Schema",
+  "table_name": "My Table",
+  "kind": "table",
+  "comment": "The purpose of My Table is...",
+  "annotations": ...,
+  "column_definitions": ...,
+  "keys": ...,
+  "foreign_keys": ...,
+  "acls": {
+    "write": ["some/curator/URI"]
+  },
+  "acl_bindings": {
+    "My Binding": {
+      "types": ["owner"],
+      "projection": "Managed By",
+      "projection_type": "acl"
+    }
+  }
+}
+</code></pre>
+<p>This example has an explicitly set, data-independent curator group who
+can modify all rows in the table, while other data-independent ACLs
+are inherited from the enclosing schema. A dynamic ACL binding called
+<code>My Row Owners</code> specifies that an ACL stored in the <code>Managed By</code>
+column of the table grants <code>owner</code> dynamic access type for individual
+rows. The representation uses an array for the <code>type</code> so that multiple
+access modes can be more easily configured without having to repeat the
+same projection many times.</p>
+<h4 id="inheritence-and-false-binding">Inheritence and False Binding<a class="headerlink" href="#inheritence-and-false-binding" title="Permanent link"></a></h4>
+<p>As a convenience, columns effectively inherit the ACL bindings of
+their table. A column whose <code>"acl_bindings"</code> document is empty will
+permit all operations that the table would allow for each row. To
+grant fewer writes, the column-level <code>"acl_bindings"</code> MUST override
+the named bindings inherited from the table.</p>
+<ul>
+<li>Replacement: the column MAY provide a different binding document under the same binding name.</li>
+<li>Suppression: the column MAY provide a literal <code>false</code> value instead of a binding document.</li>
+</ul>
+<h4 id="projection-document">Projection Document<a class="headerlink" href="#projection-document" title="Permanent link"></a></h4>
+<p>The <code>"projection"</code> field of the ACL binding is a document representing
+a parsed <em>abstract syntax tree</em> for an attribute query fragment. The
+general form of the ACL document is an array of path elements:</p>
+<ul>
+<li><code>[</code> <em>element</em> <code>,</code> ... <code>,</code> <em>column</em> <code>]</code></li>
+</ul>
+<p>This corresponds to the serialized query fragment <code>element/.../column</code>
+to project ACL content from an implicit base entity context using the
+ERMrest <code>/attribute/base</code> API.  The final <em>column</em> MUST be a string
+literal naming a column in the effective entity-path context. Each
+anterior <em>element</em> MAY use one of the following sub-document
+structures:</p>
+<ul>
+<li><code>{ "context":</code> <em>leftalias</em> <code>,</code> <em>direction</em> <code>:</code> <em>fkeyname</em>  <code>, "alias":</code> <em>rightalias</em> <code>}</code><ul>
+<li>Links a new table instance to the existing path via inner join</li>
+<li>The left-hand path context is the table instance named by <em>leftalias</em> or the immediately preceding path context if <em>leftalias</em> is <code>null</code> or absent.<ul>
+<li>The alias <code>"base"</code> is implicitly bound to the base table to which this ACL is bound.</li>
+</ul>
+</li>
+<li>The joining condition is determined by the named foreign key constraint <em>fkeyname</em> where one end is tied to the left-hand path context and the other to the newly added table instance.</li>
+<li>The <em>direction</em> of the joining condition is <code>"inbound"</code> or <code>"outbound"</code> and MUST be specified.</li>
+<li>The <em>rightalias</em> string literal is bound to the new table instance unless it is <code>null</code> or absent.<ul>
+<li>The alias <code>"base"</code> is reserved and cannot be bound as a <em>rightalias</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>{ "and": [</code> <em>filter</em> <code>,</code> ... <code>], "negate":</code> <em>negate</em> <code>}</code><ul>
+<li>A logical conjunction of multiple <em>filter</em> clauses is applied to the query to constrain matching rows.</li>
+<li>The logical result is negated only if <em>negate</em> is <code>true</code>.</li>
+<li>Each <em>filter</em> clause may be a terminal filter element, conjunction, or disjunction.</li>
+</ul>
+</li>
+<li><code>{ "or": [</code> <em>filter</em> <code>,</code> ... <code>], "negate":</code> <em>negate</em> <code>}</code><ul>
+<li>A logical disjunction of multiple <em>filter</em> clauses is applied to the query to constrain matching rows.</li>
+<li>The logical result is negated only if <em>negate</em> is <code>true</code>.</li>
+<li>Each <em>filter</em> clause may be a terminal filter element, conjunction, or disjunction.</li>
+</ul>
+</li>
+<li><code>{ "filter": [</code> <em>leftalias</em> <code>,</code> <em>column</em> <code>], "operand":</code> <em>value</em> <code>, "operator":</code> <em>operator</em> <code>, "negate":</code> <em>negate</em> <code>}</code><ul>
+<li>An individual filter <em>element</em> is applied to the query or individual <em>filter</em> clauses participate in a conjunction or disjunction.</li>
+<li>The filter constrains a named <em>column</em> in the table named by <em>leftalias</em> or the current path context if <em>leftalias</em> is <code>null</code>.</li>
+<li>The <em>operator</em> specifies the constraint operator via one of the valid operator names in the ERMrest REST API.</li>
+<li>The <em>value</em> specifies the constant operand for a binary constraint operator.</li>
+<li>The logical result of the constraint is negated only if <em>negate</em> is <code>true</code>.</li>
+</ul>
+</li>
+</ul>
+<p>Many fields may be omitted from the above structures to allow concise
+projection documents:</p>
+<ul>
+<li>Many <code>null</code> or absent values have a default semantics defined:<ul>
+<li><em>leftalias</em> is omitted to get a default path-based entity context</li>
+<li><em>rightalias</em> is omitted if no alias binding is required</li>
+<li><em>negate</em> is omitted for normal (non-negated) logical decisions</li>
+<li><em>operator</em> is omitted for regular <code>"="</code> equality comparisons</li>
+<li><em>value</em> is omitted when the unary <code>"::null::"</code> operator is used</li>
+</ul>
+</li>
+<li>A few fields are required to be present with a non-null value<ul>
+<li><em>direction</em> and <em>fkeyname</em> MUST always be present in link documents.</li>
+<li><em>filter</em> MUST always be present in conjunction and disjunction documents.</li>
+<li><em>column</em> MUST always be present in filter clauses.</li>
+<li><em>value</em> MUST always be present with each binary <em>operator</em> including the default <code>"="</code></li>
+</ul>
+</li>
+<li>Two syntactic short-hands are allowed for bare column names:<ul>
+<li>An single-element projection <code>[</code> <em>column</em> <code>]</code> MAY omit the array and specify just the string literal <em>column</em>.</li>
+<li>An unqualified filter column <code>[ null,</code> <em>column</em> <code>]</code> MAY omit the array and specify just the string literal <em>column</em>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="effective-acl-projection-query">Effective ACL Projection Query<a class="headerlink" href="#effective-acl-projection-query" title="Permanent link"></a></h4>
+<p>The <a href="#projection-document">projection document</a> assumes that a <em>base
+row query</em> similar to <code>/ermrest/catalog/N/attribute/Base/key=X/</code> will
+be formulated by the system, and the projection document describes the
+suffix necessary to turn this into an ACL projection query. E.g. in
+the <a href="#dynamic-acl-binding-representation">dynamic ACL example</a> above,
+the projection string <code>"Managed%20By"</code> names a column <code>Managed By</code>
+could be appended to a base-row URL to form a complete ACL projection
+query URL:</p>
+<pre><code>/ermrest/catalog/N/attribute/My%20Schema:My20Table/key=X/Managed%20By
+</code></pre>
+<p>For more complicated projection documents, there is a similar
+mechanical transformation which can produce an effective ACL
+projection query. The supported projection language covers a subset of
+all possible query URLs.</p>
+<h4 id="projection-types">Projection Types<a class="headerlink" href="#projection-types" title="Permanent link"></a></h4>
+<p>Zero or one rows MAY be returned as the query result. Several
+projected column types are supported, and more than one projection
+type is supported. See the following matrix:</p>
+<table>
+<thead>
+<tr>
+<th>Projected Column Type</th>
+<th>Supported <code>"projection_type"</code></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text[]</code></td>
+<td><code>acl</code> (default)</td>
+<td>The projected array is interpreted as ACL content.</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td><code>acl</code> (default)</td>
+<td>The projected text is interpreted as if it were an array containing the single value.</td>
+</tr>
+<tr>
+<td><em>any</em></td>
+<td><code>nonnull</code></td>
+<td>A non-null projected value is interpreted as a <code>true</code> authorization decision.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>nonnull</code> projection type is supported by all column types. The
+<code>acl</code> projection type is only supported for the projected column types
+shown above.</p>
+<h3 id="dynamic-acl-binding-management">Dynamic ACL Binding Management<a class="headerlink" href="#dynamic-acl-binding-management" title="Permanent link"></a></h3>
+<p>The ACL binding sub-resources are managed by a simple REST API. They
+can be embedded in the enclosing resource description during resource
+update or resource retrieval. For ACL binding management on existing
+resources, a sub-API is supported on each resource to address one ACL
+binding by name.</p>
+<ul>
+<li><code>.../acl_binding</code>: collection of all named ACL bindings</li>
+<li>GET: retrieve ACL binding collection</li>
+<li>PUT: replace ACL binding collection</li>
+<li>DELETE: unconfigure ACL binding collection</li>
+<li><code>.../acl_binding/name</code>: individually named ACL binding</li>
+<li>GET: retrieve one ACL</li>
+<li>PUT: replace one ACL</li>
+<li>DELETE: unconfigure one ACL</li>
+</ul>
+<p>An ACL binding collection returns a JSON representation identical to
+that described previously, providing an object keyed by ACL binding
+name. Each individual ACL binding is a JSON object with <code>"type"</code> and
+<code>"projection"</code> fields.</p>
+<table>
+<thead>
+<tr>
+<th>Governed Resource</th>
+<th>Example ACL Binding URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table</td>
+<td>/ermrest/catalog/N/schema/S/table/T/acl_binding/My%20Binding</td>
+</tr>
+<tr>
+<td>Column</td>
+<td>/ermrest/catalog/N/schema/S/table/T/column/C/acl_binding/My%20Binding</td>
+</tr>
+<tr>
+<td>Foreign Key</td>
+<td>/ermrest/catalog/N/schema/S/table/T/foreignkey/C1/reference/S2:T2/C2/acl_binding/My%20Binding</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-decision-introspection">Access Decision Introspection<a class="headerlink" href="#access-decision-introspection" title="Permanent link"></a></h2>
+<p>Because many user-interfaces benefit from anticipating policy
+decisions and customizing the options presented to the user, ERMrest
+exposes decision information summarizing the effects of currently
+active policy. These rights summaries take into account the requesting
+client's privileges.</p>
+<p>The decision information is presented in different ways depending
+on the resource and access mode:</p>
+<ol>
+<li>An invisible catalog will raise an access error for all access requests.</li>
+<li>An invisible model element will be omitted from the catalog introspection response and raise an error for all direct access or dependent access requests (i.e. a client guessing at model elements not shown in the introspection).<ul>
+<li>Schemas can be entirely hidden.</li>
+<li>Tables can be entirely hidden.</li>
+<li>Columns can be entirely hidden.</li>
+<li>Keys and foreign keys will be hidden if their constituent columns disallow data selection.</li>
+</ul>
+</li>
+<li>Some access rights will be advertised on model elements in the introspection document.</li>
+<li>An invisible row or datum will be filtered during queries (both for data retrieval and queries in support of data-modifying requests).</li>
+<li>Datum-specific access rights will be advertised on retrieved data rows.</li>
+<li>Datum-specific expression rights will be advertised on foreign key reference constraints as a filtered domain query.</li>
+</ol>
+<h3 id="static-rights-summary">Static Rights Summary<a class="headerlink" href="#static-rights-summary" title="Permanent link"></a></h3>
+<p>The <code>"rights"</code> sub-resources appear throughout the schema
+introspection document to describe the requesting client's rights. The
+following illustrates where these rights are distributed on sub-resources:</p>
+<pre><code>{
+  "rights": {
+    "owner": bool,
+    "create": bool
+  },
+  "schemas": {
+    "S": {
+      "rights": {
+        "owner": bool,
+        "create": bool
+      },
+      "tables": {
+        "T": {
+          "rights": {
+            "owner": bool,
+            "insert": bool,
+            "update": bool,
+            "delete": bool,
+            "select": bool
+          },
+          "column_definitions": [
+            {
+              "name": "C",
+              "rights": {
+                "insert": bool,
+                "update": bool,
+                "delete": bool,
+                "select": bool
+              }
+            },
+            ...
+          ],
+          "foreign_keys": [
+            {
+              "domain_queries": {
+                "insert": url,
+                "update": url
+              },
+              ...
+            },
+            ...
+          ]
+        },
+        ...
+      }
+    },
+    ...
+  }
+}
+</code></pre>
+<p>Model enumeration access is not indicated through the <code>"rights"</code>
+sub-document. Rather, a model element which does not grant enumeration
+will be omitted from the catalog introspection results. The rights
+sub-document does not include fields for all ACLs which may be present
+on a given model element, but only for the subset of actual access
+modes which apply to the model element itself. E.g. data access modes
+can be configured globally on catalogs or schemas, but they only grant
+actual access rights for operations applied to tables or columns.</p>
+<p>The <code>"domain_queries"</code> sub-document on a foreign key will specify an
+ERMrest query URL which shows the set of allowed values for a given
+access mode. For foreign keys with dynamic ACL bindings, this query
+may encode extra filtering on the domain. Without dynamic ACL
+bindings, the query simply encodes the source of the domain values for
+the foreign-key reference constraint.</p>
+<h3 id="row-level-rights-summary">Row-Level Rights Summary<a class="headerlink" href="#row-level-rights-summary" title="Permanent link"></a></h3>
+<p>When dynamic ACL bindings are in effect, the static rights described
+in the preceding section MAY replace the boolean <code>true</code> or <code>false</code>
+access right decision with <code>null</code> meaning the decision cannot be
+statically determined. In this case, a row-level rights summary can
+be consulted to understand access rights on existing data.</p>
+<p>The <code>ermrights</code> virtual column is available on data rows and has the following
+structure in each row:</p>
+<pre><code>{
+  "update": bool,
+  "delete": bool,
+  "column_rights": {
+    "Column Name": {
+      "update": bool,
+      "delete": bool
+    },
+    ...
+  }
+}
+</code></pre>
+<p>The <code>"update"</code> and <code>"delete"</code> fields describe row-level mutation
+rights. The <code>"update"</code> field may again be <code>null</code> if an update decision
+cannot be made for the entire row but instead must consider the scope
+of affected fields within the row.  The <code>"column_rights"</code>
+sub-document summarizes field-level rights within the row.</p>
+<p>There are several compact encoding conventions for this document:</p>
+<ul>
+<li>The entire document may be <code>null</code> if static rights completely
+  describe the client's access privileges.</li>
+<li>Individual columns may be omitted from the <code>"column_rights"</code>
+  sub-document if static column rights completely describe the
+  client's access privileges.</li>
+<li>Only <code>update</code> and <code>delete</code> access modes are summarized, since any
+  query results will already be filtered to only show row or column
+  data where <code>select</code> is <code>true</code>, and row-level policy cannot control
+  insertion of new rows.</li>
+<li>The <code>"column_rights"</code> sub-document may be omitted if it is empty.</li>
+</ul>
+<h3 id="predicting-access-decisions">Predicting Access Decisions<a class="headerlink" href="#predicting-access-decisions" title="Permanent link"></a></h3>
+<p>To predict whether a given request will be permitted, all of the
+static and row-level rights summaries must be consulted together:</p>
+<ol>
+<li>All involved model resources must be visible in the enumerated model document.</li>
+<li>The operation must be allowed by all involved model resources<ul>
+<li>Model rights must allow model access operations</li>
+<li>Static data-access rights must not disallow data access operations<ul>
+<li>Affected table or tables must not disallow access in rights advertised on table</li>
+<li>Affected column or columns must not disallow access in rights advertised on columns</li>
+<li>Foreign key values must be found in domain queries advertised on foreign key reference constraints</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Row-dependent access rights must not disallow access on existing data<ul>
+<li>Affected rows must be visible in a query</li>
+<li>Affected row rights must not disallow data modification operations</li>
+<li>Affected row-column rights must not disallow data modification operations</li>
+</ul>
+</li>
+</ol>
+<p>Keep in mind, even when all rights seem to allow an operation, the
+subsequent operation may still fail due to either asynchronous changes
+to server state or due to other integrity constraints and operational
+considerations not included in the policy system introspection.</p>
+<h2 id="usage-scenarios">Usage Scenarios<a class="headerlink" href="#usage-scenarios" title="Permanent link"></a></h2>
+<p>More illustrations might be helpful. Or, a separate cookbook document?</p>
+<h3 id="backwards-compatible-catalog-acls">Backwards-Compatible Catalog ACLs<a class="headerlink" href="#backwards-compatible-catalog-acls" title="Permanent link"></a></h3>
+<p>To get the same effective behavior as older versions of ERMrest, set
+catalog-level ACLs, leave all other sub-resource ACLs as unconfigured
+<code>null</code> values, and do not define any dynamic ACL bindings.</p>
+<h3 id="sparse-table-restrictions">Sparse Table Restrictions<a class="headerlink" href="#sparse-table-restrictions" title="Permanent link"></a></h3>
+<p>Starting with a
+<a href="#backwards-compatible-catalog-acls">backwards-compatible catalog scenario</a>,
+set a more limited ACL on one table. This table will now be subject to
+more stringent access requirements than the rest of the catalog.</p>
+<h3 id="sparse-table-exposure">Sparse Table Exposure<a class="headerlink" href="#sparse-table-exposure" title="Permanent link"></a></h3>
+<p>Starting with a
+<a href="#backwards-compatible-catalog-acls">backwards-compatible catalog scenario</a>,
+set a more inclusive ACL on one table. This table will now be subject
+to less stringent access requirements than the rest of the catalog.</p>
+<h3 id="sparse-row-level-restrictions">Sparse Row-Level Restrictions<a class="headerlink" href="#sparse-row-level-restrictions" title="Permanent link"></a></h3>
+<p>Starting with a
+<a href="#sparse-table-restrictions">restricted table scenario</a>, make sure the
+table-level ACLs exclude a class of user to whom you wish to grant
+limited row-level rights (dynamic ACLs are only effective if they
+grant extra permissions that are not already granted by a
+data-independent policy). Then, add a dynamic ACL binding which can
+selectively grant access on a row-by-row basis.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../row-level-security/" class="btn btn-neutral float-right" title="Row-Level Authorization"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install-ubuntu1204/" class="btn btn-neutral" title="Installing on Ubuntu 12.04"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 <a href="http://github.com/informatics-isi-edu/ermrest">ERMrest Project</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install-ubuntu1204/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../row-level-security/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
