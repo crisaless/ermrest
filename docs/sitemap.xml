@@ -1,104 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>None/</loc>
+     <loc>/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>None/user-doc/install-centos7/</loc>
+     <loc>/user-doc/install-centos7/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/user-doc/install-ubuntu1204/</loc>
+     <loc>/user-doc/install-ubuntu1204/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/user-doc/acls/</loc>
+     <loc>/user-doc/acls/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/user-doc/row-level-security/</loc>
+     <loc>/user-doc/row-level-security/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/user-doc/tuning/</loc>
+     <loc>/user-doc/tuning/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/user-doc/annotation/</loc>
+     <loc>/user-doc/annotation/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/user-doc/ermrest-registry-purge/</loc>
+     <loc>/user-doc/ermrest-registry-purge/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/user-doc/Chado-patterns/</loc>
+     <loc>/user-doc/Chado-patterns/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>None/api-docs/</loc>
+     <loc>/api-docs/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/api-docs/model/naming/</loc>
+     <loc>/api-docs/model/naming/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/api-docs/model/rest/</loc>
+     <loc>/api-docs/model/rest/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/api-docs/data/naming/</loc>
+     <loc>/api-docs/data/naming/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/api-docs/data/rest/</loc>
+     <loc>/api-docs/data/rest/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>None/api-docs/rest-catalog/</loc>
+     <loc>/api-docs/rest-catalog/</loc>
      <lastmod>2018-06-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
 </urlset>

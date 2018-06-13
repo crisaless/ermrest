@@ -3,31 +3,28 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installing on CentOS 7 - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Installing on CentOS 7 - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
-
   
   <script>
     // Current page data
     var mkdocs_page_name = "Installing on CentOS 7";
+    var mkdocs_page_input_path = "user-doc/install-centos7.md";
+    var mkdocs_page_url = "/user-doc/install-centos7/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,149 +44,107 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Installing on CentOS 7</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ermrest-installation-centos-7">ERMrest Installation (CentOS 7)</a></li>
-                
-                    <li><a class="toctree-l4" href="#prerequisites">Prerequisites</a></li>
-                
-                    <li><a class="toctree-l4" href="#installing-ermrest">Installing ERMrest</a></li>
-                
-                    <li><a class="toctree-l4" href="#updating-ermrest">Updating ERMrest</a></li>
-                
-                    <li><a class="toctree-l4" href="#change-web_authn-config">Change web_authn config</a></li>
-                
-                    <li><a class="toctree-l4" href="#setup-user-accounts">Setup User Accounts</a></li>
-                
-                    <li><a class="toctree-l4" href="#create-your-first-catalog">Create Your First Catalog</a></li>
-                
-                    <li><a class="toctree-l4" href="#firewall">Firewall</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Installing on CentOS 7</a>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
-
-        
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+    <li class="toctree-l3"><a href="#ermrest-installation-centos-7">ERMrest Installation (CentOS 7)</a></li>
+    
+        <ul>
         
-    </li>
+            <li><a class="toctree-l4" href="#prerequisites">Prerequisites</a></li>
+        
+            <li><a class="toctree-l4" href="#installing-ermrest">Installing ERMrest</a></li>
+        
+            <li><a class="toctree-l4" href="#updating-ermrest">Updating ERMrest</a></li>
+        
+            <li><a class="toctree-l4" href="#change-web_authn-config">Change web_authn config</a></li>
+        
+            <li><a class="toctree-l4" href="#setup-user-accounts">Setup User Accounts</a></li>
+        
+            <li><a class="toctree-l4" href="#create-your-first-catalog">Create Your First Catalog</a></li>
+        
+            <li><a class="toctree-l4" href="#firewall">Firewall</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -464,7 +419,7 @@ accomplishing this.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../install-ubuntu1204/" class="btn btn-neutral float-right" title="Installing on Ubuntu 12.04"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../install-ubuntu1204/" class="btn btn-neutral float-right" title="Installing on Ubuntu 12.04">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../.." class="btn btn-neutral" title="Welcome to the documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -483,7 +438,7 @@ accomplishing this.</p>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -491,7 +446,7 @@ accomplishing this.</p>
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -502,6 +457,10 @@ accomplishing this.</p>
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
 
 </body>
 </html>

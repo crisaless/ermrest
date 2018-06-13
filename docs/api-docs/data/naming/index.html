@@ -3,31 +3,28 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ERMrest Data Resource Naming - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-  
+  <title>ERMrest Data Resource Naming - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/highlight.css">
-
   
   <script>
     // Current page data
     var mkdocs_page_name = "ERMrest Data Resource Naming";
+    var mkdocs_page_input_path = "api-docs/data/naming.md";
+    var mkdocs_page_url = "/api-docs/data/naming/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js"></script>
   <script src="../../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
-  <script src="../../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,163 +44,121 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
     </ul>
-<li>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
+                <li class="">
+                    
+    <a class="" href="../../">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">ERMrest Data Resource Naming</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ermrest-data-resource-naming">ERMrest Data Resource Naming</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#entity-names">Entity Names</a></li>
+        
+            <li><a class="toctree-l4" href="#attribute-names">Attribute Names</a></li>
+        
+            <li><a class="toctree-l4" href="#aggregate-names">Aggregate Names</a></li>
+        
+            <li><a class="toctree-l4" href="#attribute-group-names">Attribute Group Names</a></li>
+        
+            <li><a class="toctree-l4" href="#attribute-binning">Attribute Binning</a></li>
+        
+            <li><a class="toctree-l4" href="#data-paths">Data Paths</a></li>
+        
+            <li><a class="toctree-l4" href="#filter-language">Filter Language</a></li>
+        
+            <li><a class="toctree-l4" href="#sort-modifier">Sort Modifier</a></li>
+        
+            <li><a class="toctree-l4" href="#paging-modifiers">Paging Modifiers</a></li>
+        
+            <li><a class="toctree-l4" href="#accept-query-parameter">Accept Query Parameter</a></li>
+        
+            <li><a class="toctree-l4" href="#download-query-parameter">Download Query Parameter</a></li>
+        
+            <li><a class="toctree-l4" href="#defaults-query-parameter">Defaults Query Parameter</a></li>
+        
+            <li><a class="toctree-l4" href="#limit-query-parameter">Limit Query Parameter</a></li>
+        
+            <li><a class="toctree-l4" href="#data-paging">Data Paging</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../">Guide to the ERMrest API</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">ERMrest Data Resource Naming</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ermrest-data-resource-naming">ERMrest Data Resource Naming</a></li>
-                
-                    <li><a class="toctree-l4" href="#entity-names">Entity Names</a></li>
-                
-                    <li><a class="toctree-l4" href="#attribute-names">Attribute Names</a></li>
-                
-                    <li><a class="toctree-l4" href="#aggregate-names">Aggregate Names</a></li>
-                
-                    <li><a class="toctree-l4" href="#attribute-group-names">Attribute Group Names</a></li>
-                
-                    <li><a class="toctree-l4" href="#attribute-binning">Attribute Binning</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-paths">Data Paths</a></li>
-                
-                    <li><a class="toctree-l4" href="#filter-language">Filter Language</a></li>
-                
-                    <li><a class="toctree-l4" href="#sort-modifier">Sort Modifier</a></li>
-                
-                    <li><a class="toctree-l4" href="#paging-modifiers">Paging Modifiers</a></li>
-                
-                    <li><a class="toctree-l4" href="#accept-query-parameter">Accept Query Parameter</a></li>
-                
-                    <li><a class="toctree-l4" href="#download-query-parameter">Download Query Parameter</a></li>
-                
-                    <li><a class="toctree-l4" href="#defaults-query-parameter">Defaults Query Parameter</a></li>
-                
-                    <li><a class="toctree-l4" href="#limit-query-parameter">Limit Query Parameter</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-paging">Data Paging</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -714,7 +669,7 @@ Content-Disposition: attachment; download*=UTF-8''My%20File.json
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../rest/" class="btn btn-neutral float-right" title="ERMrest Data Operations"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../rest/" class="btn btn-neutral float-right" title="ERMrest Data Operations">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../model/rest/" class="btn btn-neutral" title="ERMrest Model Operations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -733,7 +688,7 @@ Content-Disposition: attachment; download*=UTF-8''My%20File.json
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -741,7 +696,7 @@ Content-Disposition: attachment; download*=UTF-8''My%20File.json
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -752,6 +707,10 @@ Content-Disposition: attachment; download*=UTF-8''My%20File.json
       
     </span>
 </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/require.js"></script>
+      <script src="../../../search/search.js"></script>
 
 </body>
 </html>

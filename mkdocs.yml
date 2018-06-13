@@ -4,7 +4,9 @@ theme: readthedocs
 #theme_dir: 'readthedocs_custom'
 #theme_dir: 'readthedocshm'
 #site_favicon: favicon.ico
-site_dir: '_site'
+docs_dir: 'docs-src'
+site_dir: 'docs'
+
 
 pages:
 - Welcome to the documentation: index.md
