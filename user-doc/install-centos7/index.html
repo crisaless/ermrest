@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installing on CentOS 7 - ERMrest API Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installing on CentOS 7";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> ERMrest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Welcome to the documentation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Docs</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Installing on CentOS 7</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ermrest-installation-centos-7">ERMrest Installation (CentOS 7)</a></li>
+                
+                    <li><a class="toctree-l4" href="#prerequisites">Prerequisites</a></li>
+                
+                    <li><a class="toctree-l4" href="#installing-ermrest">Installing ERMrest</a></li>
+                
+                    <li><a class="toctree-l4" href="#updating-ermrest">Updating ERMrest</a></li>
+                
+                    <li><a class="toctree-l4" href="#change-web_authn-config">Change web_authn config</a></li>
+                
+                    <li><a class="toctree-l4" href="#setup-user-accounts">Setup User Accounts</a></li>
+                
+                    <li><a class="toctree-l4" href="#create-your-first-catalog">Create Your First Catalog</a></li>
+                
+                    <li><a class="toctree-l4" href="#firewall">Firewall</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../acls/">ERMrest Access Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../row-level-security/">Row-Level Authorization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tuning/">Performance Tuning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../annotation/">Model Annotation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>ERMrest API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">ERMrest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>User Docs &raquo;</li>
+        
+      
+    
+    <li>Installing on CentOS 7</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ermrest-installation-centos-7">ERMrest Installation (CentOS 7)<a class="headerlink" href="#ermrest-installation-centos-7" title="Permanent link"></a></h1>
+<p>This guide provides instructions for installing ERMrest on the CentOS 7.x Linux
+distribution.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link"></a></h2>
+<p>ERMrest depends on the following prerequisites:
+- CentOS 7.x
+- EPEL 7 repository
+- PostgreSQL 9.4 or above (note: we recommend latest stable version)
+- WebAuthn</p>
+<p>This guide assumes only that you have installed the CentOS 7.x Linux
+distribution. See http://www.centos.org for more information.</p>
+<p>In this document, commands that begin with <code>#</code> should be run as root or with
+super user privileges (<code>sudo</code>). Commands that begin with <code>$</code> may be run as a
+normal user.</p>
+<h3 id="extended-packages-for-enterprise-linux-epel">Extended Packages for Enterprise Linux (EPEL)<a class="headerlink" href="#extended-packages-for-enterprise-linux-epel" title="Permanent link"></a></h3>
+<p>Run the following commands to install the EPEL repository.</p>
+<pre><code># rsync -v rsync://mirrors.kernel.org/fedora-epel/7/x86_64/e/epel-release*.rpm .
+# dnf install epel-release*.rpm
+</code></pre>
+
+<h3 id="postgresql-94-or-above">PostgreSQL 9.4 or above<a class="headerlink" href="#postgresql-94-or-above" title="Permanent link"></a></h3>
+<p>PostgreSQL must be installed and configured to operate within the
+<a href="http://wiki.centos.org/HowTos/SELinux" title="Security-Enhanced Linux">SE-Linux</a> access control mechanism.  We recommend using the latest
+stable release, i.e. Postgres 9.5 at time of writing.</p>
+<ol>
+<li>Install the PostgreSQL 9.x repository.</li>
+</ol>
+<p>Check the list of packages for the version of PostgreSQL and your 
+   distribution from the list at <code>http://yum.postgresql.org/</code>.</p>
+<p>For CentOS 7, use:</p>
+<p><code># dnf install https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm</code>
+   For Fedora 23, use:</p>
+<p><code># dnf install https://download.postgresql.org/pub/repos/yum/9.5/fedora/fedora-23-x86_64/pgdg-fedora95-9.5-3.noarch.rpm</code></p>
+<ol>
+<li>Install the required packages. You may first want to uninstall any
+   conflicting packages if you had default PostgreSQL packages installed with
+   your base CentOS installation.</li>
+</ol>
+<p><code># dnf install policycoreutils-python
+   # dnf remove postgresql{,-server}
+   # dnf install postgresql95{,-server,-docs,-contrib}</code></p>
+<ol>
+<li>Add local labeling rules to <a href="http://wiki.centos.org/HowTos/SELinux" title="Security-Enhanced Linux">SE-Linux</a> since the files are not where CentOS
+   expects them.</li>
+</ol>
+<p><code># semanage fcontext --add --type postgresql_tmp_t "/tmp/\.s\.PGSQL\.[0-9]+.*"
+  # semanage fcontext --add --type postgresql_exec_t "/usr/pgsql-9\.[0-9]/bin/(initdb|postgres)"
+  # semanage fcontext --add --type postgresql_log_t "/var/lib/pgsql/9\.[0-9]/pgstartup\.log"
+  # semanage fcontext --add --type postgresql_db_t "/var/lib/pgsql/9\.[0-9]/data(/.*)?"
+  # restorecon -rv /var/lib/pgsql/
+  # restorecon -rv /usr/pgsql-9.*</code></p>
+<ol>
+<li>Initialize and enable the <code>postgresql</code> service.</li>
+</ol>
+<p><code># /usr/pgsql-9.5/bin/postgresql95-setup initdb
+   # systemctl enable postgresql-9.5.service
+   # systemctl start postgresql-9.5.service</code></p>
+<ol>
+<li>Verify that postmaster is running under the right SE-Linux context
+   <code>postgresql_t</code> (though process IDs will vary of course).</li>
+</ol>
+<p><code># ps -eZ | grep postgres
+   system_u:system_r:unconfined_service_t:s0 22188 ? 00:00:00 postgres
+   system_u:system_r:unconfined_service_t:s0 22189 ? 00:00:00 postgres
+   system_u:system_r:unconfined_service_t:s0 22191 ? 00:00:00 postgres
+   system_u:system_r:unconfined_service_t:s0 22192 ? 00:00:00 postgres
+   system_u:system_r:unconfined_service_t:s0 22193 ? 00:00:00 postgres
+   system_u:system_r:unconfined_service_t:s0 22194 ? 00:00:00 postgres
+   system_u:system_r:unconfined_service_t:s0 22195 ? 00:00:00 postgres</code></p>
+<ol>
+<li>Permit network connections to the database service.</li>
+</ol>
+<p><code># setsebool -P httpd_can_network_connect_db=1</code></p>
+<h3 id="other-prerequisites">Other Prerequisites<a class="headerlink" href="#other-prerequisites" title="Permanent link"></a></h3>
+<pre><code># dnf install httpd mod_{ssl,wsgi} python{,-psycopg2,-dateutil,-setuptools,-ply} pytz
+# dnf install python-webpy
+</code></pre>
+
+<p>If <code>python-webpy</code> does not exist in the package repo, install it with <code>pip</code>.</p>
+<pre><code># pip install web.py
+</code></pre>
+
+<h3 id="webauthn">WebAuthn<a class="headerlink" href="#webauthn" title="Permanent link"></a></h3>
+<p><a href="https://github.com/informatics-isi-edu/webauthn" title="WebAuthn">WebAuthn</a> is a library that provides a small extension to the lightweight
+<a href="http://webpy.org" title="web.py">web.py</a> web framework. It must be installed first before installing ERMrest.</p>
+<ol>
+<li>Download WebAuthn.</li>
+</ol>
+<p><code>$ git clone https://github.com/informatics-isi-edu/webauthn.git webauthn</code></p>
+<ol>
+<li>From the WebAuthn source directory, run the installation and deployment scripts.</li>
+</ol>
+<p><code># cd webauthn
+   # make install
+   # make deploy</code></p>
+<p>This will install the WebAuthn Python module under
+   <code>/usr/lib/python2*/site-packages/webauthn2/</code>. It will also create a
+   daemon account <code>webauthn</code> and place a default security config under
+   <code>~webauthn/webauthn2_config.json</code>. A new web service will be
+   enabled under <code>/etc/httpd/conf.d/wsgi_webauthn2.conf</code>.</p>
+<h2 id="installing-ermrest">Installing ERMrest<a class="headerlink" href="#installing-ermrest" title="Permanent link"></a></h2>
+<p>After installing the prerequisite, you are ready to install ERMrest.</p>
+<ol>
+<li>Download ERMrest.</li>
+</ol>
+<p><code>$ git clone https://github.com/informatics-isi-edu/ermrest.git ermrest</code></p>
+<ol>
+<li>From the ERMrest source directory, run the installation script.</li>
+</ol>
+<p><code># cd ermrest
+   # make install [PLATFORM=centos7]</code></p>
+<p>The install script:
+   - installs the ERMrest Python module under
+     <code>/usr/lib/python2*/site-packages/ermrest/</code>
+   - installs command-line interface (CLI) tools under <code>/usr/sbin</code>.</p>
+<ol>
+<li>From the same directory, run the deployment script.</li>
+</ol>
+<p><code># make deploy [PLATFORM=centos7]</code></p>
+<p>The deployment script:
+   - runs install target
+   - prepares service environment (makes ERMrest daemon user, creates directories)
+   - creates and initializes ERMrest-specific database, owned by daemon user
+   - creates default service config as <code>/etc/httpd/conf.d/wsgi_ermrest.conf</code>.</p>
+<p>CentOS notes:
+   - you may need to uninstall mod_python to use mod_wsgi
+   - you may need to uncomment <code>/etc/httpd/conf.d/wsgi.conf</code> load module.</p>
+<ol>
+<li>Restart the Apache httpd service</li>
+</ol>
+<p><code># service httpd restart</code></p>
+<h2 id="updating-ermrest">Updating ERMrest<a class="headerlink" href="#updating-ermrest" title="Permanent link"></a></h2>
+<p>Changes to code in your working copy can be quickly tested with the following
+commands.</p>
+<pre><code># cd path/to/ermrest
+# make install [PLATFORM=centos7]
+# service httpd restart
+</code></pre>
+
+<p>The install target updates files under <code>/usr/lib/python2*/site-packages/ermrest</code>.</p>
+<p>You may want to review <code>/usr/share/ermrest/ermrest_config.json</code> and
+<code>/usr/share/ermrest/wsgi_ermrest.conf</code> for changes, as these are
+deployed to <code>/home/ermrest/</code> and <code>/etc/httpd/conf.d/</code>, respectively,
+during fresh installs but will not overwrite deployed configurations
+during an updating install.</p>
+<h2 id="change-web_authn-config">Change web_authn config<a class="headerlink" href="#change-web_authn-config" title="Permanent link"></a></h2>
+<p>Change the following config file to use different authentication modes:
+* /home/webauthn/webauthn2_config.json</p>
+<pre><code>  &quot;sessionids_provider&quot;: &quot;webcookie&quot;, 
+  &quot;sessionstates_provider&quot;: &quot;database&quot;, 
+  &quot;clients_provider&quot;: &quot;database&quot;, 
+  &quot;attributes_provider&quot;: &quot;database&quot;, 
+  &quot;preauth_provider&quot;: &quot;database&quot;,
+</code></pre>
+
+<p>See config example <a href="https://github.com/informatics-isi-edu/webauthn/blob/master/samples/database/webauthn2_config.json">here</a>.</p>
+<h2 id="setup-user-accounts">Setup User Accounts<a class="headerlink" href="#setup-user-accounts" title="Permanent link"></a></h2>
+<p>The WebAuthn framework allows for pluggable security providers for
+authenticating clients. The simplest configuration assumes <a href="https://en.wikipedia.org/wiki/Basic_access_authentication" title="Basic authentication">basic authentication</a>
+against an internal database of usernames and passwords and attributes.</p>
+<ol>
+<li>Switch to the <code>webauthn</code> user in order to perform the  configuration steps.</li>
+</ol>
+<p><code># su - webauthn</code></p>
+<ol>
+<li>Setup an administrator account.</li>
+</ol>
+<p><code>$ webauthn2-manage adduser root
+   $ webauthn2-manage addattr admin
+   $ webauthn2-manage assign root admin
+   $ webauthn2-manage passwd root 'your password here'</code></p>
+<p>The <code>admin</code> attribute has special meaning only because it appears in
+   <code>~webauthn/webauthn2_config.json</code> in some ACLs.</p>
+<ol>
+<li>Setup a user account.</li>
+</ol>
+<p><code>$ webauthn2-manage adduser myuser
+   $ webauthn2-manage passwd myuser 'your password here'</code></p>
+<h2 id="create-your-first-catalog">Create Your First Catalog<a class="headerlink" href="#create-your-first-catalog" title="Permanent link"></a></h2>
+<p>A quick sanity check of the above configuration is to login to ERMrest, create
+a catalog, and read its meta properties. The following commands can be run as
+any local user.</p>
+<ol>
+<li>Login to ERMrest using an 'admin' account previously created with
+   <code>ermrest-webauthn-manage</code>. Do not include the single quotes in the parameter. The following script will create a cookie file named <code>cookie</code>.</li>
+</ol>
+<p><code>$ curl -k -c cookie -d username=root -d password='your password here' https://$(hostname)/ermrest/authn/session</code></p>
+<ol>
+<li>Create a catalog.</li>
+</ol>
+<p><code>$ curl -k -b cookie -XPOST https://$(hostname)/ermrest/catalog/</code></p>
+<ol>
+<li>Inspect the catalog metadata. (Readable indentation added here.)</li>
+</ol>
+<p>```
+   $ curl -k -b cookie -H "Accept: application/json" \</p>
+<blockquote>
+<p>https://$(hostname)/ermrest/catalog/1
+   {
+     "meta": [
+       {"k": "owner", "v": "testuser"},
+       {"k": "write_user", "v": "testuser"},
+       {"k": "read_user", "v": "testuser"},
+       {"k": "schema_write_user", "v": "testuser"},
+       {"k": "content_read_user", "v": "testuser"},
+       {"k": "content_write_user", "v": "testuser"}],
+     "id": "1"
+   }
+   ```</p>
+</blockquote>
+<ol>
+<li>Inspect the catalog schema.</li>
+</ol>
+<p>```
+   $ curl -k -b cookie -H "Accept: application/json" \</p>
+<blockquote>
+<p>https://$(hostname)/ermrest/catalog/1/schema
+   {
+      "schemas": {
+      ...
+   }
+   ```</p>
+</blockquote>
+<h2 id="firewall">Firewall<a class="headerlink" href="#firewall" title="Permanent link"></a></h2>
+<p>You will need to edit your firewall rules if you want to access the ERMrest
+service from remote hosts. There are multiple ways to do this.</p>
+<p>https://fedoraproject.org/wiki/How_to_edit_iptables_rules</p>
+<p>Normally, you need to expose the HTTPS port (TCP 443) to client
+machines. Contact your local system administrator if you need help
+accomplishing this.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install-ubuntu1204/" class="btn btn-neutral float-right" title="Installing on Ubuntu 12.04"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Welcome to the documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 <a href="http://github.com/informatics-isi-edu/ermrest">ERMrest Project</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install-ubuntu1204/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

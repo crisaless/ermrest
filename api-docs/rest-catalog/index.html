@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ERMrest Catalog Operations - ERMrest API Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ERMrest Catalog Operations";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> ERMrest API Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Welcome to the documentation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>User Docs</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/install-centos7/">Installing on CentOS 7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/acls/">ERMrest Access Control</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/row-level-security/">Row-Level Authorization</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/tuning/">Performance Tuning</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/annotation/">Model Annotation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>ERMrest API</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Guide to the ERMrest API</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../model/naming/">ERMrest Model Resource Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../model/rest/">ERMrest Model Operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../data/naming/">ERMrest Data Resource Naming</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../data/rest/">ERMrest Data Operations</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">ERMrest Catalog Operations</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ermrest-catalog-operations">ERMrest Catalog Operations</a></li>
+                
+                    <li><a class="toctree-l4" href="#catalog-creation">Catalog Creation</a></li>
+                
+                    <li><a class="toctree-l4" href="#catalog-retrieval">Catalog Retrieval</a></li>
+                
+                    <li><a class="toctree-l4" href="#catalog-deletion">Catalog Deletion</a></li>
+                
+                    <li><a class="toctree-l4" href="#access-control-lists-retrieval">Access Control Lists Retrieval</a></li>
+                
+                    <li><a class="toctree-l4" href="#access-control-list-retrieval">Access Control List Retrieval</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">ERMrest API Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>ERMrest API &raquo;</li>
+        
+      
+    
+    <li>ERMrest Catalog Operations</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ermrest-catalog-operations">ERMrest Catalog Operations<a class="headerlink" href="#ermrest-catalog-operations" title="Permanent link"></a></h1>
+<p>In this documentation and examples, the <em>service</em> as described in the previous section on <a href="../model/naming/">model resource naming</a> is assumed to be <code>https://www.example.com/ermrest</code>.</p>
+<h2 id="catalog-creation">Catalog Creation<a class="headerlink" href="#catalog-creation" title="Permanent link"></a></h2>
+<p>The POST method is used to create an empty catalog:</p>
+<pre><code>POST /ermrest/catalog HTTP/1.1
+Host: www.example.com
+</code></pre>
+<p>On success, this request yields the new catalog identifier, e.g. <code>42</code> in this example:</p>
+<pre><code>HTTP/1.1 201 Created
+Location: /ermrest/catalog/42
+Content-Type: application/json
+
+{"id": 42}
+</code></pre>
+<p>Typical error response codes include:
+- 404 Not Found
+- 403 Forbidden
+- 401 Unauthorized</p>
+<h2 id="catalog-retrieval">Catalog Retrieval<a class="headerlink" href="#catalog-retrieval" title="Permanent link"></a></h2>
+<p>The GET method is used to get a short description of a catalog:</p>
+<pre><code>GET /ermrest/catalog/42 HTTP/1.1
+Host: www.example.com
+</code></pre>
+<p>On success, this request yields a description:</p>
+<pre><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{"id": "42", ...}
+</code></pre>
+<p>Typical error response codes include:
+- 404 Not Found
+- 403 Forbidden
+- 401 Unauthorized</p>
+<h2 id="catalog-deletion">Catalog Deletion<a class="headerlink" href="#catalog-deletion" title="Permanent link"></a></h2>
+<p>The DELETE method is used to delete a catalog and all its content:</p>
+<pre><code>DELETE /ermrest/catalog/42 HTTP/1.1
+Host: www.example.com
+</code></pre>
+<p>On success, this request yields a description:</p>
+<pre><code>HTTP/1.1 204 No Content
+</code></pre>
+<p>Typical error response codes include:
+- 404 Not Found
+- 403 Forbidden
+- 401 Unauthorized</p>
+<h2 id="access-control-lists-retrieval">Access Control Lists Retrieval<a class="headerlink" href="#access-control-lists-retrieval" title="Permanent link"></a></h2>
+<p>The GET method is used to get a summary of all access control (ACL)
+lists:</p>
+<pre><code>GET /ermrest/catalog/42/acl HTTP/1.1
+Host: www.example.com
+</code></pre>
+<p>On success, this request yields the ACL content as an object with one value list for each named ACL:</p>
+<pre><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "owner": ["user1", "group2"]
+}
+</code></pre>
+<p>White-space is added above for readability. This legacy representation is likely to change in future revisions.</p>
+<p>Typical error response codes include:
+- 404 Not Found
+- 403 Forbidden
+- 401 Unauthorized</p>
+<h2 id="access-control-list-retrieval">Access Control List Retrieval<a class="headerlink" href="#access-control-list-retrieval" title="Permanent link"></a></h2>
+<p>The GET method is used to get a summary of a specific access control (ACL)
+list (<code>owner</code> in this example):</p>
+<pre><code>GET /ermrest/catalog/42/acl/owner HTTP/1.1
+Host: www.example.com
+</code></pre>
+<p>On success, this request yields the ACL content as a value list:</p>
+<pre><code>HTTP/1.1 200 OK
+Content-Type: application/json
+
+["user1", "group2"]
+</code></pre>
+<p>This legacy representation is likely to change in future revisions.</p>
+<p>Typical error response codes include:
+- 404 Not Found
+- 403 Forbidden
+- 401 Unauthorized</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../data/rest/" class="btn btn-neutral" title="ERMrest Data Operations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 <a href="http://github.com/informatics-isi-edu/ermrest">ERMrest Project</a>.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../data/rest/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>
