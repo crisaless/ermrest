@@ -1,5 +1,5 @@
 site_name: ERMrest API Documentation
-site_description: API documentation for ERMrest codebase in the DERIVA ecosystem.
+site_description: API documentation for ERMrest codebase in the DERIVA framework.
 theme: readthedocs
 #theme_dir: 'readthedocs_custom'
 #theme_dir: 'readthedocshm'
