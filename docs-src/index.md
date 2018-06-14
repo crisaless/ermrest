@@ -1,6 +1,8 @@
 # ERMrest Documentation
 
-(Note: Re-using the README content here..)
+[User Docs](/ermrest/user-doc/install-centos7/) | [API Reference](/ermrest/api-docs/)
+
+(Note: Re-using the README content here for now..)
 
 [ERMrest](http://github.com/informatics-isi-edu/ermrest) (rhymes with
 "earn rest") is a general relational data storage service for web-based, data-oriented collaboration. It allows general entity-relationship modeling of data resources manipulated by RESTful access methods.
