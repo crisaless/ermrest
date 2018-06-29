@@ -1,4 +1,4 @@
-
+[TOC]
 # Chado Vocabulary Patterns
 
 This page is to explore some possible use-case patterns for using

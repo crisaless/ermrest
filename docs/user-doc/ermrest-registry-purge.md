@@ -1,3 +1,4 @@
+[TOC]
 # ermrest-registry-purge
 
 ermrest-registry-purge -- purge ERMrest catalogs

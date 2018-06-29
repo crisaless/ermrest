@@ -1,5 +1,7 @@
-
+[TOC]
 # Installing on Ubuntu 12.04
+
+## Installation steps
 
 1. Enable upstream Postgresql repo following [Apt instructions from Postgresql Wiki](http://wiki.postgresql.org/wiki/Apt).
 2. Set the `PLATFORM=ubuntu1204` variable for our Makefiles

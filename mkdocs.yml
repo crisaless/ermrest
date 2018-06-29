@@ -1,11 +1,8 @@
 site_name: ERMrest API Documentation
 site_description: API documentation for ERMrest codebase in the DERIVA framework.
 theme: readthedocs
-#theme_dir: 'readthedocs_custom'
-#theme_dir: 'readthedocshm'
-#site_favicon: favicon.ico
-docs_dir: 'docs-src'
-site_dir: 'docs'
+extra_css: 
+  - css/extra.css
 
 
 pages:
@@ -30,7 +27,7 @@ pages:
 
 markdown_extensions:
     - toc:
-        permalink: 
+        permalink: True
     - admonition:
 
 copyright: Copyright &copy; 2018 <a href="http://github.com/informatics-isi-edu/ermrest">ERMrest Project</a>.

@@ -1,4 +1,4 @@
-
+[TOC]
 # Row-Level Authorization
 
 With ERMrest, all web requests execute under daemon accounts with

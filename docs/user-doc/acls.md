@@ -1,4 +1,4 @@
-
+[TOC]
 # ERMrest Access Control
 
 ## Scope of Use Cases to Address

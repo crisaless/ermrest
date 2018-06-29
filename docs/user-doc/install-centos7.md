@@ -3,6 +3,8 @@
 This guide provides instructions for installing ERMrest on the CentOS 7.x Linux
 distribution.
 
+[TOC]
+
 ## Prerequisites
 
 ERMrest depends on the following prerequisites:
