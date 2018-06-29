@@ -2,77 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/install-centos7/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/install-ubuntu1204/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/acls/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/row-level-security/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/tuning/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/annotation/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/ermrest-registry-purge/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/user-doc/Chado-patterns/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/api-docs/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/api-docs/model/naming/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/api-docs/model/rest/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/api-docs/data/naming/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/api-docs/data/rest/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/api-docs/rest-catalog/</loc>
-     <lastmod>2018-06-28</lastmod>
+     <lastmod>2018-06-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
