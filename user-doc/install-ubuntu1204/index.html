@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installing on Ubuntu 12.04 - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Installing on Ubuntu 12.04 - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Installing on Ubuntu 12.04";
+    var mkdocs_page_input_path = "user-doc/install-ubuntu1204.md";
+    var mkdocs_page_url = "/user-doc/install-ubuntu1204/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,139 +45,99 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Installing on Ubuntu 12.04</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#installing-on-ubuntu-1204">Installing on Ubuntu 12.04</a></li>
-                
-                    <li><a class="toctree-l4" href="#https-notes">HTTPS Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#postgres-notes">Postgres Notes</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class="">
+                    
+    <a class="" href="../install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Installing on Ubuntu 12.04</a>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
-
-        
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+    <li class="toctree-l3"><a href="#installing-on-ubuntu-1204">Installing on Ubuntu 12.04</a></li>
+    
+        <ul>
         
-    </li>
+            <li><a class="toctree-l4" href="#installation-steps">Installation steps</a></li>
+        
+            <li><a class="toctree-l4" href="#https-notes">HTTPS Notes</a></li>
+        
+            <li><a class="toctree-l4" href="#postgres-notes">Postgres Notes</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -217,7 +175,18 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="installing-on-ubuntu-1204">Installing on Ubuntu 12.04<a class="headerlink" href="#installing-on-ubuntu-1204" title="Permanent link"></a></h1>
+                <div class="toc">
+<ul>
+<li><a href="#installing-on-ubuntu-1204">Installing on Ubuntu 12.04</a><ul>
+<li><a href="#installation-steps">Installation steps</a></li>
+<li><a href="#https-notes">HTTPS Notes</a></li>
+<li><a href="#postgres-notes">Postgres Notes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="installing-on-ubuntu-1204">Installing on Ubuntu 12.04<a class="headerlink" href="#installing-on-ubuntu-1204" title="Permanent link">&para;</a></h1>
+<h2 id="installation-steps">Installation steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Enable upstream Postgresql repo following <a href="http://wiki.postgresql.org/wiki/Apt">Apt instructions from Postgresql Wiki</a>.</li>
 <li>Set the <code>PLATFORM=ubuntu1204</code> variable for our Makefiles</li>
@@ -231,7 +200,7 @@
 <li><code>make deploy PLATFORM=ubuntu1204</code></li>
 <li>Enable SSL</li>
 </ol>
-<h2 id="https-notes">HTTPS Notes<a class="headerlink" href="#https-notes" title="Permanent link"></a></h2>
+<h2 id="https-notes">HTTPS Notes<a class="headerlink" href="#https-notes" title="Permanent link">&para;</a></h2>
 <ol>
 <li>The web service is called <code>apache2</code> and some file locations and operating details differ from that documented for CentOS.</li>
 <li>The ermrest <code>predeploy</code> make target will run <code>apt-get</code> to install dependencies including self-signed certificates for apache.</li>
@@ -240,7 +209,7 @@
 <li><code>s2ensite default-ssl</code></li>
 <li><code>service apache2 reload</code></li>
 </ol>
-<h2 id="postgres-notes">Postgres Notes<a class="headerlink" href="#postgres-notes" title="Permanent link"></a></h2>
+<h2 id="postgres-notes">Postgres Notes<a class="headerlink" href="#postgres-notes" title="Permanent link">&para;</a></h2>
 <p>Content of <code>/etc/apt/sources.list.d/pgdg.list</code>:</p>
 <pre><code>deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main
 </code></pre>
@@ -255,7 +224,7 @@ dependencies pull in an older, incompatible postgres from Ubuntu 12.04 itself.</
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../acls/" class="btn btn-neutral float-right" title="ERMrest Access Control"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../acls/" class="btn btn-neutral float-right" title="ERMrest Access Control">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../install-centos7/" class="btn btn-neutral" title="Installing on CentOS 7"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -274,7 +243,7 @@ dependencies pull in an older, incompatible postgres from Ubuntu 12.04 itself.</
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -282,7 +251,7 @@ dependencies pull in an older, incompatible postgres from Ubuntu 12.04 itself.</
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -293,6 +262,10 @@ dependencies pull in an older, incompatible postgres from Ubuntu 12.04 itself.</
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
 
 </body>
 </html>

@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Chado Vocabulary Patterns - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Chado Vocabulary Patterns - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Chado Vocabulary Patterns";
+    var mkdocs_page_input_path = "user-doc/Chado-patterns.md";
+    var mkdocs_page_url = "/user-doc/Chado-patterns/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,151 +45,109 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Chado Vocabulary Patterns</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#chado-vocabulary-patterns">Chado Vocabulary Patterns</a></li>
-                
-                    <li><a class="toctree-l4" href="#assumptions-and-conventions">Assumptions and conventions</a></li>
-                
-                    <li><a class="toctree-l4" href="#chado-derived-core-tables">Chado-derived core tables</a></li>
-                
-                    <li><a class="toctree-l4" href="#domain-tables">Domain tables</a></li>
-                
-                    <li><a class="toctree-l4" href="#domain-path-tables">Domain path tables</a></li>
-                
-                    <li><a class="toctree-l4" href="#data-tables-using-controlled-terms">Data tables using controlled terms</a></li>
-                
-                    <li><a class="toctree-l4" href="#heuristics-and-idioms">Heuristics and idioms</a></li>
-                
-                    <li><a class="toctree-l4" href="#open-questions">Open questions</a></li>
-                
-                    <li><a class="toctree-l4" href="#implementation">Implementation</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class="">
+                    
+    <a class="" href="../install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Chado Vocabulary Patterns</a>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
-
-        
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+    <li class="toctree-l3"><a href="#chado-vocabulary-patterns">Chado Vocabulary Patterns</a></li>
+    
+        <ul>
         
-    </li>
+            <li><a class="toctree-l4" href="#assumptions-and-conventions">Assumptions and conventions</a></li>
+        
+            <li><a class="toctree-l4" href="#chado-derived-core-tables">Chado-derived core tables</a></li>
+        
+            <li><a class="toctree-l4" href="#domain-tables">Domain tables</a></li>
+        
+            <li><a class="toctree-l4" href="#domain-path-tables">Domain path tables</a></li>
+        
+            <li><a class="toctree-l4" href="#data-tables-using-controlled-terms">Data tables using controlled terms</a></li>
+        
+            <li><a class="toctree-l4" href="#heuristics-and-idioms">Heuristics and idioms</a></li>
+        
+            <li><a class="toctree-l4" href="#open-questions">Open questions</a></li>
+        
+            <li><a class="toctree-l4" href="#implementation">Implementation</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -229,10 +185,44 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="chado-vocabulary-patterns">Chado Vocabulary Patterns<a class="headerlink" href="#chado-vocabulary-patterns" title="Permanent link"></a></h1>
+                <div class="toc">
+<ul>
+<li><a href="#chado-vocabulary-patterns">Chado Vocabulary Patterns</a><ul>
+<li><a href="#assumptions-and-conventions">Assumptions and conventions</a></li>
+<li><a href="#chado-derived-core-tables">Chado-derived core tables</a><ul>
+<li><a href="#db">db</a></li>
+<li><a href="#cv">cv</a></li>
+<li><a href="#dbxref">dbxref</a></li>
+<li><a href="#cvterm">cvterm</a></li>
+<li><a href="#cvtermpath">cvtermpath</a></li>
+</ul>
+</li>
+<li><a href="#domain-tables">Domain tables</a></li>
+<li><a href="#domain-path-tables">Domain path tables</a></li>
+<li><a href="#data-tables-using-controlled-terms">Data tables using controlled terms</a></li>
+<li><a href="#heuristics-and-idioms">Heuristics and idioms</a><ul>
+<li><a href="#basic-data-access">Basic data access</a></li>
+<li><a href="#data-integrity-and-basic-value-enumeration">Data integrity and basic value enumeration</a></li>
+<li><a href="#prettier-term-display">Prettier term display</a></li>
+<li><a href="#semantic-search-via-transitive-closures">Semantic search via transitive closures</a></li>
+</ul>
+</li>
+<li><a href="#open-questions">Open questions</a><ul>
+<li><a href="#should-we-differentiate-between-different-types-of-synonyms">Should we differentiate between different types of synonyms?</a></li>
+<li><a href="#which-alternate-dbxrefs-should-be-included-in-the-cvterm-table">Which alternate dbxrefs should be included in the cvterm table?</a></li>
+<li><a href="#what-dbxrefs-should-appear-in-the-domain-table">What dbxrefs should appear in the domain table?</a></li>
+<li><a href="#second-thoughts-about-arrays-in-cvterm">Second thoughts about arrays in cvterm</a></li>
+</ul>
+</li>
+<li><a href="#implementation">Implementation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="chado-vocabulary-patterns">Chado Vocabulary Patterns<a class="headerlink" href="#chado-vocabulary-patterns" title="Permanent link">&para;</a></h1>
 <p>This page is to explore some possible use-case patterns for using
 Chado schema for controlled vocabularies.</p>
-<h2 id="assumptions-and-conventions">Assumptions and conventions<a class="headerlink" href="#assumptions-and-conventions" title="Permanent link"></a></h2>
+<h2 id="assumptions-and-conventions">Assumptions and conventions<a class="headerlink" href="#assumptions-and-conventions" title="Permanent link">&para;</a></h2>
 <ol>
 <li>We want to load ontologies easily, so being consistent with Chado is probably helpful.</li>
 <li>We want to separate ontology/vocabulary preparation from normal data management operations</li>
@@ -241,12 +231,12 @@ Chado schema for controlled vocabularies.</p>
 <li>Data serialization should not depend on order vocabularies are loaded</li>
 <li>We will use the dbxref concept specifically with <em>DB</em> <code>:</code> <em>ACCESSION</em> <code>:</code> <em>VERSION</em> textual formatted indentifiers as keys and foreign keys in vocabulary storage columns, e.g. <code>OBO_REL:is_a:</code>.</li>
 </ol>
-<h2 id="chado-derived-core-tables">Chado-derived core tables<a class="headerlink" href="#chado-derived-core-tables" title="Permanent link"></a></h2>
+<h2 id="chado-derived-core-tables">Chado-derived core tables<a class="headerlink" href="#chado-derived-core-tables" title="Permanent link">&para;</a></h2>
 <p>Assume a basic ontology storage area similar to
 <a href="http://gmod.org/wiki/Chado_CV_Module">Chado CV Module</a>.  Here, we
 only focus on the few tables that would affect normal data
 management.</p>
-<h3 id="db">db<a class="headerlink" href="#db" title="Permanent link"></a></h3>
+<h3 id="db">db<a class="headerlink" href="#db" title="Permanent link">&para;</a></h3>
 <p>The <code>db</code> table enumerates database authorities.</p>
 <pre><code>CREATE TABLE db (
   name text PRIMARY KEY,
@@ -257,7 +247,7 @@ management.</p>
 
 </code></pre>
 
-<h3 id="cv">cv<a class="headerlink" href="#cv" title="Permanent link"></a></h3>
+<h3 id="cv">cv<a class="headerlink" href="#cv" title="Permanent link">&para;</a></h3>
 <p>The <code>cv</code> table enumerates controlled vocabularies.</p>
 <pre><code>CREATE TABLE cv (
   name text PRIMARY KEY,
@@ -266,7 +256,7 @@ management.</p>
 
 </code></pre>
 
-<h3 id="dbxref">dbxref<a class="headerlink" href="#dbxref" title="Permanent link"></a></h3>
+<h3 id="dbxref">dbxref<a class="headerlink" href="#dbxref" title="Permanent link">&para;</a></h3>
 <p>The <code>dbxref</code> table enumerates global, unique, stable public identifiers. This table probably won't be used in day-to-day
 queries because the db, accession, and version are included in denormalized form elsewhere; it's included in the model
 because this is the only place the dbxref <code>description</code> field exists.</p>
@@ -280,7 +270,7 @@ because this is the only place the dbxref <code>description</code> field exists.
 );
 </code></pre>
 
-<h3 id="cvterm">cvterm<a class="headerlink" href="#cvterm" title="Permanent link"></a></h3>
+<h3 id="cvterm">cvterm<a class="headerlink" href="#cvterm" title="Permanent link">&para;</a></h3>
 <p>The <code>cvterm</code> table enumerates all available terms. In addition to denormalizing the <code>dbxref</code> and <code>cv</code> fields, we've
 added a <code>dbxref_unversioned</code> field (the dbxref without version information, which is likely to be searched for) and
 array fields for synonyms and alternate dbxrefs (derived from the chado <code>cvtermsynonym</code> and <code>cvterm_dbxref</code> tables).</p>
@@ -299,7 +289,7 @@ array fields for synonyms and alternate dbxrefs (derived from the chado <code>cv
 );
 </code></pre>
 
-<h3 id="cvtermpath">cvtermpath<a class="headerlink" href="#cvtermpath" title="Permanent link"></a></h3>
+<h3 id="cvtermpath">cvtermpath<a class="headerlink" href="#cvtermpath" title="Permanent link">&para;</a></h3>
 <p>The <code>cvtermpath</code> table stores transitive closures of term-to-term relationship graphs.
 The <code>cvtermpath_id</code> field is present only because ermrest requires a single-valued unique key.</p>
 <pre><code>CREATE TABLE cvtermpath (
@@ -317,7 +307,7 @@ The <code>cvtermpath_id</code> field is present only because ermrest requires a 
 <li>Don't allow NULL <code>type_dbxref</code> which is a closure over multiple relationships</li>
 <li>Don't store multiple rows for same subject, relationship, object. Store <em>minimum</em> path distance.</li>
 </ol>
-<h2 id="domain-tables">Domain tables<a class="headerlink" href="#domain-tables" title="Permanent link"></a></h2>
+<h2 id="domain-tables">Domain tables<a class="headerlink" href="#domain-tables" title="Permanent link">&para;</a></h2>
 <p>We can have any number of domain tables to enumerate a subset of
 controlled vocabulary terms. Each domain table is a filtered subset of
 <code>cvterm</code> with the same structure. A domain table could be implemented as
@@ -334,7 +324,7 @@ as tables curated by hand, etc.</p>
 </code></pre>
 
 <p>We want a foreign key reference constraint to emphasize that the domain table is a proper subset of the core cvterm table.</p>
-<h2 id="domain-path-tables">Domain path tables<a class="headerlink" href="#domain-path-tables" title="Permanent link"></a></h2>
+<h2 id="domain-path-tables">Domain path tables<a class="headerlink" href="#domain-path-tables" title="Permanent link">&para;</a></h2>
 <p>For each domain table, we will have a corresponding table defined as a subset of
 <code>cvtermpath</code> with all records that include any term in the domain table. For example,
 a domain path table could be defined with</p>
@@ -343,7 +333,7 @@ a domain path table could be defined with</p>
   join mydomain1 d on d.dbxref = p.subject_dbxref or d.dbxref = p.object_dbxref;
 </code></pre>
 
-<h2 id="data-tables-using-controlled-terms">Data tables using controlled terms<a class="headerlink" href="#data-tables-using-controlled-terms" title="Permanent link"></a></h2>
+<h2 id="data-tables-using-controlled-terms">Data tables using controlled terms<a class="headerlink" href="#data-tables-using-controlled-terms" title="Permanent link">&para;</a></h2>
 <p>We can use controlled vocabularies for any number of data columns by
 configuring a foreign key constraint to a domain table.</p>
 <pre><code>CREATE TABLE mydata (
@@ -353,18 +343,18 @@ configuring a foreign key constraint to a domain table.</p>
 );
 </code></pre>
 
-<h2 id="heuristics-and-idioms">Heuristics and idioms<a class="headerlink" href="#heuristics-and-idioms" title="Permanent link"></a></h2>
-<h3 id="basic-data-access">Basic data access<a class="headerlink" href="#basic-data-access" title="Permanent link"></a></h3>
+<h2 id="heuristics-and-idioms">Heuristics and idioms<a class="headerlink" href="#heuristics-and-idioms" title="Permanent link">&para;</a></h2>
+<h3 id="basic-data-access">Basic data access<a class="headerlink" href="#basic-data-access" title="Permanent link">&para;</a></h3>
 <p>Naive access to data tables can completely ignore the connections to a
 vocabulary and just consume the stored data column as explicit dbxref
 strings.</p>
-<h3 id="data-integrity-and-basic-value-enumeration">Data integrity and basic value enumeration<a class="headerlink" href="#data-integrity-and-basic-value-enumeration" title="Permanent link"></a></h3>
+<h3 id="data-integrity-and-basic-value-enumeration">Data integrity and basic value enumeration<a class="headerlink" href="#data-integrity-and-basic-value-enumeration" title="Permanent link">&para;</a></h3>
 <p>Any consumer can introspect the data table and understand the foreign
 key constraint to see which dbxref values are allows in a data
 column. The database will enforce the foreign key integrity to prevent
 values from being added to a data column outside the configured domain
 term set.</p>
-<h3 id="prettier-term-display">Prettier term display<a class="headerlink" href="#prettier-term-display" title="Permanent link"></a></h3>
+<h3 id="prettier-term-display">Prettier term display<a class="headerlink" href="#prettier-term-display" title="Permanent link">&para;</a></h3>
 <p>Because the domain table uses the same schema as the core cvterm table,
 it includes definitions and other metadata. Some presentation customization
 can be done based on this information alone. However, there might be more
@@ -375,7 +365,7 @@ vocabulary-aware UX features desired in some cases?</p>
 <li>Detect fkey chain to core cvterm table to enable special vocabulary functions?</li>
 <li>Annotate domain tables to enable special vocabulary functions?</li>
 </ol>
-<h3 id="semantic-search-via-transitive-closures">Semantic search via transitive closures<a class="headerlink" href="#semantic-search-via-transitive-closures" title="Permanent link"></a></h3>
+<h3 id="semantic-search-via-transitive-closures">Semantic search via transitive closures<a class="headerlink" href="#semantic-search-via-transitive-closures" title="Permanent link">&para;</a></h3>
 <p>Any consumer can recognize the foreign key chain, through domain
 table, to the <code>cvterm</code> table and the presence of the <code>cvtermpath</code>
 table encoding inter-term relationships.</p>
@@ -429,8 +419,8 @@ clear what value the ERMrest syntactic sugar would add except
 robustness against large term sets being encoded in URLs. The
 client-side complexity does not change much as long as you need to
 guide users through a query-construction UX...</p>
-<h2 id="open-questions">Open questions<a class="headerlink" href="#open-questions" title="Permanent link"></a></h2>
-<h3 id="should-we-differentiate-between-different-types-of-synonyms">Should we differentiate between different types of synonyms?<a class="headerlink" href="#should-we-differentiate-between-different-types-of-synonyms" title="Permanent link"></a></h3>
+<h2 id="open-questions">Open questions<a class="headerlink" href="#open-questions" title="Permanent link">&para;</a></h2>
+<h3 id="should-we-differentiate-between-different-types-of-synonyms">Should we differentiate between different types of synonyms?<a class="headerlink" href="#should-we-differentiate-between-different-types-of-synonyms" title="Permanent link">&para;</a></h3>
 <p>Currently, all synonyms included in the <code>cvtermsynonym</code> table are included in the <code>synonyms</code> field of <code>cvterm</code>.
 Synonyms can be of different types, however, and we may want to treat synonyms differently based on their type.
 To facilitate discussion, I've included the <code>cvtermsynonym</code> table (denormalized for our-style foreign keys),
@@ -444,7 +434,7 @@ which includes all synonyms and their types:</p>
 );
 </code></pre>
 
-<h3 id="which-alternate-dbxrefs-should-be-included-in-the-cvterm-table">Which alternate dbxrefs should be included in the cvterm table?<a class="headerlink" href="#which-alternate-dbxrefs-should-be-included-in-the-cvterm-table" title="Permanent link"></a></h3>
+<h3 id="which-alternate-dbxrefs-should-be-included-in-the-cvterm-table">Which alternate dbxrefs should be included in the cvterm table?<a class="headerlink" href="#which-alternate-dbxrefs-should-be-included-in-the-cvterm-table" title="Permanent link">&para;</a></h3>
 <p>Chado has a table called <code>cvterm_dbxref</code> which includes both external
 dbxrefs and dbxrefs that are used for provenance
 information. Currently, we include both in the <code>alternate_dbxrefs</code>
@@ -460,7 +450,7 @@ keys):</p>
 );
 </code></pre>
 
-<h3 id="what-dbxrefs-should-appear-in-the-domain-table">What dbxrefs should appear in the domain table?<a class="headerlink" href="#what-dbxrefs-should-appear-in-the-domain-table" title="Permanent link"></a></h3>
+<h3 id="what-dbxrefs-should-appear-in-the-domain-table">What dbxrefs should appear in the domain table?<a class="headerlink" href="#what-dbxrefs-should-appear-in-the-domain-table" title="Permanent link">&para;</a></h3>
 <p>Our current model specifies that domain tables should have the same format as <code>cvterm</code> tables, with the <code>dbxref</code> field a foreign
 key to the <code>cvterm</code> table. For example, one entry from Uberon looks like this:</p>
 <pre><code>dbxref              | UBERON:0000006:
@@ -497,7 +487,7 @@ alternate_dbxrefs   | {XAO:0000159:,VHOG:0000646:,UMLS:C0022131:,MIAA:0000076:,M
 </code></pre>
 
 <p>If we do this, we might want to change the name <code>dbxref_unversioned</code> to something like <code>dbxref_common</code>.</p>
-<h3 id="second-thoughts-about-arrays-in-cvterm">Second thoughts about arrays in cvterm<a class="headerlink" href="#second-thoughts-about-arrays-in-cvterm" title="Permanent link"></a></h3>
+<h3 id="second-thoughts-about-arrays-in-cvterm">Second thoughts about arrays in cvterm<a class="headerlink" href="#second-thoughts-about-arrays-in-cvterm" title="Permanent link">&para;</a></h3>
 <p>In Postgres, there are two equivalent ways to express "'foo' is an element of the array bar" in a query:</p>
 <pre><code>'foo' = ANY(bar)
 </code></pre>
@@ -508,7 +498,7 @@ alternate_dbxrefs   | {XAO:0000159:,VHOG:0000646:,UMLS:C0022131:,MIAA:0000076:,M
 
 <p>The second form will take advantage of gin indexes; the first form will not. Pattern matching is also difficult on array elements.
 We might want to consider dropping the array columns from <code>cvterm</code> and using <code>cvtermsynonym</code> and <code>cvterm_dbxref</code> instead.</p>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link"></a></h2>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <p>See the <a href="https://github.com/informatics-isi-edu/data-commons/tree/master/chado">data commons chado directory</a> for
 scripts to create a data_commons schema and pull data from chado into those tables. See the
 <a href="https://github.com/informatics-isi-edu/data-commons/tree/master/chado/obo">data commons chado/obo directory</a>
@@ -520,7 +510,7 @@ for information about reading obo files into standard chado tables.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../api-docs/" class="btn btn-neutral float-right" title="Guide to the ERMrest API"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../api-docs/" class="btn btn-neutral float-right" title="Guide to the ERMrest API">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../ermrest-registry-purge/" class="btn btn-neutral" title="ermrest-registry-purge"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -539,7 +529,7 @@ for information about reading obo files into standard chado tables.</p>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -547,7 +537,7 @@ for information about reading obo files into standard chado tables.</p>
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -558,6 +548,10 @@ for information about reading obo files into standard chado tables.</p>
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
 
 </body>
 </html>

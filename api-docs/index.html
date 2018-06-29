@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Guide to the ERMrest API - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../img/favicon.ico">
-
-  
+  <title>Guide to the ERMrest API - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
-
+  <link href="../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Guide to the ERMrest API";
+    var mkdocs_page_input_path = "api-docs/index.md";
+    var mkdocs_page_url = "/api-docs/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
   <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script>
-  <script src="../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,139 +45,97 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../user-doc/install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user-doc/acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user-doc/row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user-doc/tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user-doc/annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
     </ul>
-<li>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Guide to the ERMrest API</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ermrest-api">ERMrest API</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#url-conventions">URL Conventions</a></li>
+        
+            <li><a class="toctree-l4" href="#resource-and-service-model">Resource and Service Model</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Guide to the ERMrest API</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ermrest-api">ERMrest API</a></li>
-                
-                    <li><a class="toctree-l4" href="#url-conventions">URL Conventions</a></li>
-                
-                    <li><a class="toctree-l4" href="#resource-and-service-model">Resource and Service Model</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -217,10 +173,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ermrest-api">ERMrest API<a class="headerlink" href="#ermrest-api" title="Permanent link"></a></h1>
-<p><a href="http://github.com/informatics-isi-edu/ermrest">ERMrest</a> (rhymes with "earn rest") is a general relational data storage service for web-based, data-oriented collaboration.  See the <a href="../README.md">ERMrest overview</a> for a general description and motivation.</p>
+                <h1 id="ermrest-api">ERMrest API<a class="headerlink" href="#ermrest-api" title="Permanent link">&para;</a></h1>
+<p><a href="http://github.com/informatics-isi-edu/ermrest">ERMrest</a> (rhymes with "earn rest") is a general relational data storage service for web-based, data-oriented collaboration.  See the <a href="../">ERMrest overview</a> for a general description and motivation.</p>
 <p>This technical document specifies the web service protocol in terms of resources, resource representations, resource naming, and operations.</p>
-<h2 id="url-conventions">URL Conventions<a class="headerlink" href="#url-conventions" title="Permanent link"></a></h2>
+<h2 id="url-conventions">URL Conventions<a class="headerlink" href="#url-conventions" title="Permanent link">&para;</a></h2>
 <p>Any ERMrest URL is a valid HTTP URL and contains user-generated content which may need to be escaped. Several reserved characters from RFC 3986 are used as meta-syntax in ERMrest and MUST be escaped if they are meant to be part of a user-generated identifiers or literal data and MUST NOT be escaped if they are meant to indicate the ERMrest meta-syntax:</p>
 <ul>
 <li>The <code>/</code> or forward-slash, used as a path separator character</li>
@@ -234,9 +190,9 @@
 <li>TODO: more syntax to list here</li>
 </ul>
 <p>All other reserved characters should be escaped in user-generated content in URLs, but have no special meaning to ERMrest when appearing in unescaped form.</p>
-<h2 id="resource-and-service-model">Resource and Service Model<a class="headerlink" href="#resource-and-service-model" title="Permanent link"></a></h2>
+<h2 id="resource-and-service-model">Resource and Service Model<a class="headerlink" href="#resource-and-service-model" title="Permanent link">&para;</a></h2>
 <p>At its core, ERMrest is a multi-tenant service that can host multiple datasets, each with its own entity-relationship model.  The dataset, model, and data are further decomposed into web resources to allow collaborative management and interaction with the data store.</p>
-<h3 id="graph-of-web-resources">Graph of Web Resources<a class="headerlink" href="#graph-of-web-resources" title="Permanent link"></a></h3>
+<h3 id="graph-of-web-resources">Graph of Web Resources<a class="headerlink" href="#graph-of-web-resources" title="Permanent link">&para;</a></h3>
 <p>The ERMrest web service model exposes resources to support management of datasets, the entity-relationship model, and the actual data stored using that model:</p>
 <ol>
 <li>Service: the entire multi-tenant service end-point</li>
@@ -273,7 +229,7 @@
 <li><a href="data/naming/#aggregate-names">Aggregate</a>: a data tuple summarizing a (possibly filtered) projection of a table</li>
 </ol>
 <p>Rather than treating data resources as nested sub-resources of the model resources, ERMrest treats them as separate parallel resource spaces often thought of as separate APIs for model and data-level access.  The reality is that these resources have many possible semantic relationships in the form of a more general graph structure, and any attempt to normalize them into a hierarchical structure must emphasize some relationships at the detriment of others.  We group model elements hierarchically to assist in listing and to emphasize their nested lifecycle properties.  We split out data resources because they can have a more complex relationship to multiple model elements simultaneously.</p>
-<h4 id="model-annotations">Model Annotations<a class="headerlink" href="#model-annotations" title="Permanent link"></a></h4>
+<h4 id="model-annotations">Model Annotations<a class="headerlink" href="#model-annotations" title="Permanent link">&para;</a></h4>
 <p>The machine-readable annotation mechanism in ERMrest enables a three-level interpretation of datasets:</p>
 <ol>
 <li>The tabular data itself, which can be processed by any client capable of understanding tabular data representations.</li>
@@ -281,7 +237,7 @@
 <li>Semantic or presentation guidance, which can be processed by a client capable of augmenting the structural schemata with additional hints.</li>
 </ol>
 <p>As an openly extensible, machine-readable interface, the annotations are keyed by globally unique identifiers (URIs) and contain arbitrary document content which can be understood according to rules associated with that key URI.  A client SHOULD ignore annotations stored using a key that the client does not understand.  A client MAY ignore all annotations and simply work with the underlying relational data based on its inherent structure with or without any additional contextual knowledge to guide its interpretation.</p>
-<h3 id="data-resource-naming-language">Data Resource Naming Language<a class="headerlink" href="#data-resource-naming-language" title="Permanent link"></a></h3>
+<h3 id="data-resource-naming-language">Data Resource Naming Language<a class="headerlink" href="#data-resource-naming-language" title="Permanent link">&para;</a></h3>
 <p>The <a href="data/naming/">data resources</a> make use of a model-driven language for denoting sub-parts of an entity-relationship modeled dataset. The language has several main syntactic components:</p>
 <ol>
 <li><a href="data/naming/#data-paths">Data Paths</a></li>
@@ -321,7 +277,7 @@
 <p>The sort, paging, and limit syntax together can support <a href="data/naming/#data-paging">paged data access</a>:
   1. <a href="data/naming/#simple-paging-by-entity-key">Simple Paging by Entity Key</a>
   1. <a href="data/naming/#paging-with-application-sort-order">Paging with Application Sort Order</a></p>
-<h3 id="restful-operations-overview">RESTful Operations Overview<a class="headerlink" href="#restful-operations-overview" title="Permanent link"></a></h3>
+<h3 id="restful-operations-overview">RESTful Operations Overview<a class="headerlink" href="#restful-operations-overview" title="Permanent link">&para;</a></h3>
 <p>The ERMrest interface supports typical HTTP operations to manage these different levels of resource:</p>
 <ol>
 <li><a href="rest-catalog/">Catalog-level operations</a></li>
@@ -387,9 +343,9 @@
 <li><a href="data/rest/#aggregate-retrieval">Aggregate Retrieval</a></li>
 </ol>
 <p>These operations produce and/or consume representations of the resources. ERMrest defines its own JSON representations for catalog and model elements, and supports common representations of tabular data.</p>
-<h3 id="http-concurrency-control">HTTP Concurrency Control<a class="headerlink" href="#http-concurrency-control" title="Permanent link"></a></h3>
+<h3 id="http-concurrency-control">HTTP Concurrency Control<a class="headerlink" href="#http-concurrency-control" title="Permanent link">&para;</a></h3>
 <p>ERMrest supports opportunistic concurrency control using an entity tag ("ETag") as per the HTTP standards to identify versions of web resources. The ETag is a version identifier that composes with a URL to fully identify a resource version. In other words, ETag strings are meaningless when separated from the resource address.</p>
-<h4 id="precondition-processing">Precondition Processing<a class="headerlink" href="#precondition-processing" title="Permanent link"></a></h4>
+<h4 id="precondition-processing">Precondition Processing<a class="headerlink" href="#precondition-processing" title="Permanent link">&para;</a></h4>
 <ol>
 <li>A response header <code>ETag</code> carries an ETag representing the resource version <em>at the conclusion of request processing</em>.</li>
 <li>A <code>HEAD</code> response with an ETag identifies the version of the resource currently present in the server.</li>
@@ -404,7 +360,7 @@
 <li>A <code>PUT</code>, <code>POST</code>, or <code>DELETE</code> operation returns a normal <code>200 OK</code> or <code>201 Created</code> in the absence of preconditions or if preconditions are met. They return <code>412 PreconditionFailed</code> when preconditions are not met; in this case, the operation has no effect on server-side resource state.</li>
 <li>A <code>GET</code> operation returns a normal <code>200 OK</code> in the absence of preconditions or if preconditions are met. It returns <code>304 Not Modified</code> when preconditions are not met. This alternative status code is required by the HTTP standard due to its idiomatic use for cache-control of <code>GET</code> responses; the "not modified" status means the client can reuse a representation when an <code>If-None-Match</code> header is used to specify the ETag associated with the representation previously retrieved by that client.</li>
 </ol>
-<h4 id="atomic-retrieval-of-multiple-resources">Atomic Retrieval of Multiple Resources<a class="headerlink" href="#atomic-retrieval-of-multiple-resources" title="Permanent link"></a></h4>
+<h4 id="atomic-retrieval-of-multiple-resources">Atomic Retrieval of Multiple Resources<a class="headerlink" href="#atomic-retrieval-of-multiple-resources" title="Permanent link">&para;</a></h4>
 <p>An example of concurrency control is to dump a set of data values from several tables with confidence that they are transactionally consistent. ERMrest provides basic atomicity at the HTTP request level, but this is insufficient to guarantee consistency of several different requests. Instead, a client might follow this workflow:</p>
 <ol>
 <li>Plan the set of resources it needs to retrieve (e.g. a list of ERMrest URLs for schema and/or data resources).</li>
@@ -414,7 +370,7 @@
 <li>A <code>200 OK</code> response indicates that the server-side state has changed, so save both the representation and corresponding ETag from the response.</li>
 <li>Repeat step (3) until an entire cycle of visits to all resources yielded <code>304 Not Modified</code>, indicating that no resource changed state since their states were retrieved.</li>
 </ol>
-<h4 id="atomic-change-of-a-resource">Atomic Change of a Resource<a class="headerlink" href="#atomic-change-of-a-resource" title="Permanent link"></a></h4>
+<h4 id="atomic-change-of-a-resource">Atomic Change of a Resource<a class="headerlink" href="#atomic-change-of-a-resource" title="Permanent link">&para;</a></h4>
 <p>Another example of concurrency control is to change a resource while ensuring that other clients' modifications are not clobbered:</p>
 <ol>
 <li>Fetch a resource representation and its corresponding ETag.</li>
@@ -423,7 +379,7 @@
 <li>A <code>412 Precondition Failed</code> response indicates that someone else modified the resource since you last fetched it, so repeat the process from step (1).</li>
 </ol>
 <p>ERMrest always makes an atomic change for one request, but the above workflow protects against concurrent access to the resource while the client is interpreting the first representation it retrieved, planning the mutation, and requesting that the change be applied. When an update hazard is identified by the <code>412 Precondition Failed</code> response, the client has avoided making an unsafe change and repeats the entire inspect, plan, execute cycle.</p>
-<h4 id="atomic-change-of-multiple-resources">Atomic Change of Multiple Resources<a class="headerlink" href="#atomic-change-of-multiple-resources" title="Permanent link"></a></h4>
+<h4 id="atomic-change-of-multiple-resources">Atomic Change of Multiple Resources<a class="headerlink" href="#atomic-change-of-multiple-resources" title="Permanent link">&para;</a></h4>
 <p>The two preceding workflows can be combined in order to determine consistent modification of multiple data or schema resources, with some caveats:</p>
 <ol>
 <li>Perform <a href="#atomic-retrieval-of-multiple-resources">atomic retrieval of multiple resources</a> until a consistent set of <URL, representation, ETag> triples are known.</li>
@@ -439,7 +395,7 @@
 <li>If a <code>HEAD</code> request to each resource successfully changed in step (3.B.) yield the same revision ETag that was returned in the mutation response, the client may be able to apply reverse operations to undo its changes. Whether practical reverse operations are available depends on the operation and size of affected data.</li>
 </ul>
 <p>Alternative ERMrest bulk-change APIs are under consideration to allow truly atomic change by sending a complete multi-resource request and allowing the server to process it under transaction control. Users interested in such features should contact the developers by filing an issue in our GitHub project.</p>
-<h3 id="set-based-data-resources-and-representations">Set-based Data Resources and Representations<a class="headerlink" href="#set-based-data-resources-and-representations" title="Permanent link"></a></h3>
+<h3 id="set-based-data-resources-and-representations">Set-based Data Resources and Representations<a class="headerlink" href="#set-based-data-resources-and-representations" title="Permanent link">&para;</a></h3>
 <p>ERMrest presents a composite resource model for data as sets of tuples. Using different resource naming mechanisms, this allows reference to data at different granularities and levels of abstraction:</p>
 <ol>
 <li>All entities in one table, or a filtered subset of those entities.</li>
@@ -456,7 +412,7 @@
 <li><code>application/x-json-stream</code>: a stream of JSON objects, one per line, where each object represents one tuple with named fields.</li>
 </ul>
 <p>Other data formats may be supported in future revisions.</p>
-<h4 id="scalar-and-array-typed-attributes">Scalar and Array Typed Attributes<a class="headerlink" href="#scalar-and-array-typed-attributes" title="Permanent link"></a></h4>
+<h4 id="scalar-and-array-typed-attributes">Scalar and Array Typed Attributes<a class="headerlink" href="#scalar-and-array-typed-attributes" title="Permanent link">&para;</a></h4>
 <p>ERMrest generically exposes a range of scalar and array-of-scalar attribute types, with names familiar to PostgreSQL users:</p>
 <ul>
 <li><code>boolean</code>: Can be either <code>True</code> or <code>False</code>.</li>
@@ -474,7 +430,7 @@ left-hand value) to a constant value supplied in the URI filter syntax
 (the right-hand value). In general, the core operators apply to all
 scalar types except the regular-expression matches which only apply to
 <code>text</code> column type.</p>
-<h5 id="arrays-of-scalars">Arrays of Scalars<a class="headerlink" href="#arrays-of-scalars" title="Permanent link"></a></h5>
+<h5 id="arrays-of-scalars">Arrays of Scalars<a class="headerlink" href="#arrays-of-scalars" title="Permanent link">&para;</a></h5>
 <p>ERMrest supports columns storing arrays of the preceding scalar
 types. These arrays are encoded differently depending on the MIME type:</p>
 <ul>
@@ -489,7 +445,7 @@ right-hand value from the URI filter syntax. The predicate is
 considered to match if <em>any</em> contained array element individually
 matches using the scalar comparison.</p>
 <p>A column storing an array of scalars MAY be used as a unique key or foreign key, subject to PostgreSQL native interpretation of array equality. However, it is RECOMMENDED that data modelers consider normalizing their schema to avoid such constructs.</p>
-<h5 id="experimental-types">Experimental Types<a class="headerlink" href="#experimental-types" title="Permanent link"></a></h5>
+<h5 id="experimental-types">Experimental Types<a class="headerlink" href="#experimental-types" title="Permanent link">&para;</a></h5>
 <p>ERMrest makes a best-effort attempt to support additional attribute
 types when exposing legacy database schema. These types MAY support
 value storage and exchange to varying degrees but support for filter
@@ -509,7 +465,7 @@ for other reasons:</p>
 <p>In a normal ERMrest configuration, these types are not supported when
 defining new columns or tables, and only mapped from existing
 databases for legacy support.</p>
-<h4 id="csv-format">CSV Format<a class="headerlink" href="#csv-format" title="Permanent link"></a></h4>
+<h4 id="csv-format">CSV Format<a class="headerlink" href="#csv-format" title="Permanent link">&para;</a></h4>
 <p>ERMrest supports the <code>text/csv</code> MIME type for tabular input or output,
 as described in <a href="https://tools.ietf.org/html/rfc4180">RFC 4180</a>. If
 deviation between the RFC and ERMrest are found, please report them as
@@ -527,13 +483,13 @@ points worth noting:</p>
 <li>All whitespace between field separators is significant.</li>
 <li>A quoted record SHOULD NOT be preceded or followed by whitespace, e.g. <code>...," a b ",...</code> is preferred to <code>..., "a b" ,...</code>. The RFC does not allow the latter form. ERMrest MAY interpret both as equivalent but this behavior SHOULD NOT be relied upon by clients.</li>
 </ul>
-<h5 id="null-values">NULL values<a class="headerlink" href="#null-values" title="Permanent link"></a></h5>
+<h5 id="null-values">NULL values<a class="headerlink" href="#null-values" title="Permanent link">&para;</a></h5>
 <p>As a further note, ERMrest interprets quoted and unquoted empty fields distinctly:</p>
 <ul>
 <li><code>...,,...</code>: NULL value</li>
 <li><code>...,"",...</code>: empty string</li>
 </ul>
-<h5 id="example-csv-content">Example CSV Content<a class="headerlink" href="#example-csv-content" title="Permanent link"></a></h5>
+<h5 id="example-csv-content">Example CSV Content<a class="headerlink" href="#example-csv-content" title="Permanent link">&para;</a></h5>
 <p>In this example, we include the literal <code>&lt;CRLF&gt;</code> to emphasize the record terminator that would not be visually appreciable otherwise:</p>
 <pre><code>row #,column A,column B,column C,column D&lt;CRLF&gt;
 1,a,b,c,d&lt;CRLF&gt;
@@ -572,7 +528,7 @@ CSV records:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="model/naming/" class="btn btn-neutral float-right" title="ERMrest Model Resource Naming"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="model/naming/" class="btn btn-neutral float-right" title="ERMrest Model Resource Naming">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../user-doc/Chado-patterns/" class="btn btn-neutral" title="Chado Vocabulary Patterns"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -591,7 +547,7 @@ CSV records:</p>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -599,7 +555,7 @@ CSV records:</p>
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -610,6 +566,10 @@ CSV records:</p>
       
     </span>
 </div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
 
 </body>
 </html>

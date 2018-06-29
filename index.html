@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="API documentation for ERMrest codebase in the DERIVA framework.">
   
-  <title>ERMrest API Documentation</title>
-  
-
   <link rel="shortcut icon" href="./img/favicon.ico">
-
-  
+  <title>Welcome to the documentation - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="./css/theme.css" type="text/css" />
   <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="./css/highlight.css">
-
+  <link href="./css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "None";
+    var mkdocs_page_name = "Welcome to the documentation";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
   </script>
   
   <script src="./js/jquery-2.1.1.min.js"></script>
   <script src="./js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./js/highlight.pack.js"></script>
-  <script src="./js/theme.js"></script> 
-
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,135 +45,103 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 current">
-        <a class="current" href=".">Welcome to the documentation</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ermrest-documentation">ERMrest Documentation</a></li>
-                
-            
-            </ul>
-        
-    </li>
-<li>
-          
-            <li>
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Welcome to the documentation</a>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
             
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/install-centos7/">Installing on CentOS 7</a>
+    <li class="toctree-l2"><a href="#ermrest-documentation">ERMrest Documentation</a></li>
+    
+        <ul>
         
-    </li>
+            <li><a class="toctree-l3" href="#status">Status</a></li>
+        
+            <li><a class="toctree-l3" href="#using-ermrest">Using ERMrest</a></li>
+        
+            <li><a class="toctree-l3" href="#help-and-contact">Help and Contact</a></li>
+        
+            <li><a class="toctree-l3" href="#license">License</a></li>
+        
+            <li><a class="toctree-l3" href="#about-us">About Us</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="api-docs/">Guide to the ERMrest API</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="api-docs/model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="api-docs/model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="api-docs/data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="api-docs/data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="api-docs/rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="user-doc/install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-doc/acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-doc/row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-doc/tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-doc/annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
     </ul>
-<li>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="api-docs/">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="api-docs/model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="api-docs/model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="api-docs/data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="api-docs/data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="api-docs/rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -209,8 +175,82 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ermrest-documentation">ERMrest Documentation<a class="headerlink" href="#ermrest-documentation" title="Permanent link"></a></h1>
-<p>TBD</p>
+                <h1 id="ermrest-documentation">ERMrest Documentation<a class="headerlink" href="#ermrest-documentation" title="Permanent link">&para;</a></h1>
+<p><a href="./ermrest/user-doc/install-centos7/">User Docs</a> | <a href="./ermrest/api-docs/">API Reference</a></p>
+<p>(Note: Re-using the README content here for now..)</p>
+<p><a href="http://github.com/informatics-isi-edu/ermrest">ERMrest</a> (rhymes with
+"earn rest") is a general relational data storage service for web-based, data-oriented collaboration. It allows general entity-relationship modeling of data resources manipulated by RESTful access methods.</p>
+<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
+<p><a href="https://travis-ci.org/informatics-isi-edu/ermrest"><img alt="Build Status" src="https://travis-ci.org/informatics-isi-edu/ermrest.svg?branch=master" /></a></p>
+<p>ERMrest is research software, but its core features have proven stable enough to use in several production science projects.</p>
+<p><strong>Known Issues</strong>: See our list of <a href="https://github.com/informatics-isi-edu/ermrest/issues?q=is%3Aopen+is%3Aissue+label%3Abug">known issues</a> at GitHub.</p>
+<h2 id="using-ermrest">Using ERMrest<a class="headerlink" href="#using-ermrest" title="Permanent link">&para;</a></h2>
+<p>As a protocol, the <a href="./api-doc/">ERMrest REST API</a> can be easily accessed by browser-based applications or any basic HTTP client library. Its main features:
+- Exposes a PostgreSQL RDBMS containing science data.
+- Model neutrality
+  - Allows use of natural, domain-specific relational data schema rather than forcing a fixed and generic schema.
+  - Supports schema and data introspection by clients to allow generic presentation of tabular data rather than only hard-coded and domain-specific clients.
+- An expressive set of data access methods
+  - Set-based single and bulk whole-entity (table row) create/read/update/delete (CRUD);
+  - Set-based single and bulk partial-entity (table cell) read/update (RU);
+  - Aggregate and grouped aggregate queries;
+  - Convenient ERM <em>navigation</em> to map common relational <em>inner join</em> idioms into URL path structures.
+- Multi-tenancy to easily allow multiple <em>catalogs</em>, each with its own schema and data content.
+  - Group/role-based permissions for catalog-level access
+    - Catalog visibility
+    - Schema management
+    - Data retrieval
+    - Data modification
+  - Fine-grained <a href="user-doc/acls/">access control lists</a> to manage access policies</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>ERMrest is developed and tested primarily on the CentOS 7 enterprise Linux distribution with Python 2.7. It has a conventional web service stack:
+- Apache HTTPD
+- mod_wsgi
+- web.py lightweight web framework
+- psycopg2 database driver
+- PostgreSQL 9.5 or later (9.6 recommended)
+- webauthn security adaptation layer (another product of our group)</p>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
+<p>See <a href="user-doc/install-centos7/">ERMrest Installation (CentOS 7)</a>.</p>
+<h3 id="operational-model">Operational Model<a class="headerlink" href="#operational-model" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The HTTPS connection is terminated by Apache HTTPD.</li>
+<li>The <code>mod_webauthn</code> Apache HTTPD module determined authenticated client context for requests</li>
+<li>The ERMrest service code executes as the <code>ermrest</code> daemon user</li>
+<li>The service configuration is loaded from <code>~ermrest/ermrest_config.json</code>:</li>
+<li>Core access control policy for catalog creation.</li>
+<li>Data type presentation.</li>
+<li>All dynamic data is stored in the RDBMS.</li>
+<li>The catalog's data model</li>
+<li>The catalog's fine-grained access control lists</li>
+<li>The catalog's data content</li>
+<li>Client authentication context is retrieved from Apache request environment</li>
+<li>Client identity</li>
+<li>Client roles/group membership.</li>
+<li>Catalog-level authorization of service requests is determined by the service code:</li>
+<li>ACLs retrieved from RDBMS</li>
+<li>ACLs are intersected with authenticated client context.</li>
+<li>The RDBMS is accessed using daemon service credentials</li>
+<li>Fine-grained <em>static</em> authorization is handled in service prior to executing SQL</li>
+<li>Fine-grained <em>dynamic</em> authorization is handled in service by compiling policy checks into SQL</li>
+</ol>
+<h2 id="help-and-contact">Help and Contact<a class="headerlink" href="#help-and-contact" title="Permanent link">&para;</a></h2>
+<p>Please direct questions and comments to the <a href="https://github.com/informatics-isi-edu/ermrest/issues">project issue tracker</a> at GitHub.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>ERMrest is made available as open source under the Apache License,
+Version 2.0. Please see the <a href="./LICENSE">LICENSE file</a> for more
+information.</p>
+<h2 id="about-us">About Us<a class="headerlink" href="#about-us" title="Permanent link">&para;</a></h2>
+<p>ERMrest is developed in the
+<a href="http://www.isi.edu/research_groups/informatics/home">Informatics group</a>
+at the <a href="http://www.isi.edu">USC Information Sciences Institute</a>. The
+primary design team is:</p>
+<ul>
+<li>Karl Czajkowski</li>
+<li>Carl Kesselman</li>
+<li>Rob Schuler</li>
+<li>Serban Voinea</li>
+</ul>
               
             </div>
           </div>
@@ -218,7 +258,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="user-doc/install-centos7/" class="btn btn-neutral float-right" title="Installing on CentOS 7"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="user-doc/install-centos7/" class="btn btn-neutral float-right" title="Installing on CentOS 7">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -235,7 +275,7 @@
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -243,7 +283,7 @@
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -252,11 +292,15 @@
       
     </span>
 </div>
+    <script>var base_url = '.';</script>
+    <script src="./js/theme.js"></script>
+      <script src="./search/require.js"></script>
+      <script src="./search/search.js"></script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 0.14.0
-Build Date UTC : 2018-06-13 17:52:40.124557
+MkDocs version : 0.17.4
+Build Date UTC : 2018-06-29 01:27:01
 -->

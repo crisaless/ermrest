@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Row-Level Authorization - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Row-Level Authorization - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Row-Level Authorization";
+    var mkdocs_page_input_path = "user-doc/row-level-security.md";
+    var mkdocs_page_url = "/user-doc/row-level-security/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,141 +45,99 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Row-Level Authorization</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#row-level-authorization">Row-Level Authorization</a></li>
-                
-                    <li><a class="toctree-l4" href="#performance-considerations">Performance Considerations</a></li>
-                
-                    <li><a class="toctree-l4" href="#other-considerations">Other Considerations</a></li>
-                
-                    <li><a class="toctree-l4" href="#instructions-and-examples">Instructions and Examples</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class="">
+                    
+    <a class="" href="../install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../acls/">ERMrest Access Control</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Row-Level Authorization</a>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
-
-        
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+    <li class="toctree-l3"><a href="#row-level-authorization">Row-Level Authorization</a></li>
+    
+        <ul>
         
-    </li>
+            <li><a class="toctree-l4" href="#performance-considerations">Performance Considerations</a></li>
+        
+            <li><a class="toctree-l4" href="#other-considerations">Other Considerations</a></li>
+        
+            <li><a class="toctree-l4" href="#instructions-and-examples">Instructions and Examples</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api-docs/">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api-docs/rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -219,7 +175,24 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="row-level-authorization">Row-Level Authorization<a class="headerlink" href="#row-level-authorization" title="Permanent link"></a></h1>
+                <div class="toc">
+<ul>
+<li><a href="#row-level-authorization">Row-Level Authorization</a><ul>
+<li><a href="#performance-considerations">Performance Considerations</a></li>
+<li><a href="#other-considerations">Other Considerations</a></li>
+<li><a href="#instructions-and-examples">Instructions and Examples</a><ul>
+<li><a href="#example-1-enable-row-level-security">Example 1: Enable row-level security</a></li>
+<li><a href="#example-2-create-row-level-policies-to-restore-all-access">Example 2: Create row-level policies to restore all access</a></li>
+<li><a href="#example-3-drop-policies-to-limit-it-again">Example 3: Drop policies to limit it again</a></li>
+<li><a href="#example-4-check-against-webauthn-context-but-not-row-data-eg-to-emulate-a-table-level-privilege-using-webauthn-roles-instead-of-postgresql-roles">Example 4: Check against webauthn context but not row data, e.g. to emulate a table-level privilege using webauthn roles instead of PostgreSQL roles</a></li>
+<li><a href="#example-5-consider-row-data-in-more-complete-example-assuming-the-table-includes-owner-and-acl-columns-of-type-text-and-text-respectively">Example 5: Consider row-data in more complete example, assuming the table includes owner and acl columns of type text and text[], respectively</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="row-level-authorization">Row-Level Authorization<a class="headerlink" href="#row-level-authorization" title="Permanent link">&para;</a></h1>
 <p>With ERMrest, all web requests execute under daemon accounts with
 eponymous PostgresQL roles:</p>
 <ul>
@@ -257,7 +230,7 @@ in each table to decide if or how to interpret or restrict the content
 of row data to make access control decisions. There is no distinction
 between access control or non-access control data at the SQL nor
 ERMrest protocol level.</p>
-<h2 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link"></a></h2>
+<h2 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h2>
 <p>Because row-level security policies are effectively injecting SQL
 expressions into the WHERE clauses of the other service-generated SQL
 queries, they can dramatically change service performance if used
@@ -362,7 +335,7 @@ f = open('session.json')
 s = json.load(f)
 [ a['id'] for a in s['attributes'] ]
 </code></pre>
-<h2 id="other-considerations">Other Considerations<a class="headerlink" href="#other-considerations" title="Permanent link"></a></h2>
+<h2 id="other-considerations">Other Considerations<a class="headerlink" href="#other-considerations" title="Permanent link">&para;</a></h2>
 <p>Row-level security affects all access to tables for which it is
 enabled. Backup database dumps could be incomplete unless taken by a
 PostgreSQL superuser and/or with row level security temporarily
@@ -381,7 +354,7 @@ then reapply the authoritative policies.</p>
 <li>DBAs SHOULD NOT attempt to introduce tables in ermrest backing databases which are not owned by the <code>ermrest</code> role.</li>
 <li>DBAs SHOULD NOT attempt to introduce SQL views which are not owned by the <code>ermrest</code> role.</li>
 </ol>
-<h2 id="instructions-and-examples">Instructions and Examples<a class="headerlink" href="#instructions-and-examples" title="Permanent link"></a></h2>
+<h2 id="instructions-and-examples">Instructions and Examples<a class="headerlink" href="#instructions-and-examples" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Upgrade your postgres to 9.5 or later</li>
 <li>Have latest ERMrest master code deployed with <code>FORCE ROW LEVEL SECURITY</code> on all tables.</li>
@@ -390,26 +363,26 @@ then reapply the authoritative policies.</p>
 <li>Drop or alter row-level policies by name</li>
 </ol>
 <p>NOTE: the following examples use old-style group IDs as with the <code>goauth</code> webauthn provider. In the future, such group IDs will replace the <code>g:</code> prefix with a URL designating the group membership provider who asserted the group membership attribute.</p>
-<h3 id="example-1-enable-row-level-security">Example 1: Enable row-level security<a class="headerlink" href="#example-1-enable-row-level-security" title="Permanent link"></a></h3>
+<h3 id="example-1-enable-row-level-security">Example 1: Enable row-level security<a class="headerlink" href="#example-1-enable-row-level-security" title="Permanent link">&para;</a></h3>
 <pre><code>ALTER TABLE my_example ENABLE ROW LEVEL SECURITY;
 </code></pre>
 <p>At this point, ERMrest should still work (a smart thing to test) but data operations on this table will fail as the default policies do not allow any operations on any row data!  Go back to normal with:</p>
 <pre><code>ALTER TABLE my_example DISABLE ROW LEVEL SECURITY;
 </code></pre>
-<h3 id="example-2-create-row-level-policies-to-restore-all-access">Example 2: Create row-level policies to restore all access<a class="headerlink" href="#example-2-create-row-level-policies-to-restore-all-access" title="Permanent link"></a></h3>
+<h3 id="example-2-create-row-level-policies-to-restore-all-access">Example 2: Create row-level policies to restore all access<a class="headerlink" href="#example-2-create-row-level-policies-to-restore-all-access" title="Permanent link">&para;</a></h3>
 <pre><code>CREATE POLICY select_all ON my_example FOR SELECT USING (True);
 CREATE POLICY delete_all ON my_example FOR DELETE USING (True);
 CREATE POLICY insert_all ON my_example FOR INSERT WITH CHECK (True);
 CREATE POLICY update_all ON my_example FOR UPDATE USING (True) WITH CHECK (True);
 </code></pre>
 <p>At this point, all data access is possible again.  In general, the <code>USING (expr)</code> part must evaluate to true for existing rows to be accessed while <code>WITH CHECK (expr)</code> part must evaluate true for new row content to be applied. The <code>USING</code> and <code>WITH CHECK</code> policies MAY reference column data from the existing or new row data, respectively; it is not possible to consider both existing and replacement row content in a single policy expression.</p>
-<h3 id="example-3-drop-policies-to-limit-it-again">Example 3: Drop policies to limit it again<a class="headerlink" href="#example-3-drop-policies-to-limit-it-again" title="Permanent link"></a></h3>
+<h3 id="example-3-drop-policies-to-limit-it-again">Example 3: Drop policies to limit it again<a class="headerlink" href="#example-3-drop-policies-to-limit-it-again" title="Permanent link">&para;</a></h3>
 <pre><code>DROP POLICY update_all ON my_example;
 DROP POLICY insert_all ON my_example;
 DROP POLICY delete_all ON my_example;
 DROP POLICY select_all ON my_example;
 </code></pre>
-<h3 id="example-4-check-against-webauthn-context-but-not-row-data-eg-to-emulate-a-table-level-privilege-using-webauthn-roles-instead-of-postgresql-roles">Example 4: Check against webauthn context but not row data, e.g. to emulate a table-level privilege using webauthn roles instead of PostgreSQL roles<a class="headerlink" href="#example-4-check-against-webauthn-context-but-not-row-data-eg-to-emulate-a-table-level-privilege-using-webauthn-roles-instead-of-postgresql-roles" title="Permanent link"></a></h3>
+<h3 id="example-4-check-against-webauthn-context-but-not-row-data-eg-to-emulate-a-table-level-privilege-using-webauthn-roles-instead-of-postgresql-roles">Example 4: Check against webauthn context but not row data, e.g. to emulate a table-level privilege using webauthn roles instead of PostgreSQL roles<a class="headerlink" href="#example-4-check-against-webauthn-context-but-not-row-data-eg-to-emulate-a-table-level-privilege-using-webauthn-roles-instead-of-postgresql-roles" title="Permanent link">&para;</a></h3>
 <pre><code>CREATE POLICY select_group
 ON my_example
     FOR SELECT
@@ -420,7 +393,7 @@ ON my_example
   FOR SELECT
   USING ( 'devuser' = _ermrest.current_client() );
 </code></pre>
-<h3 id="example-5-consider-row-data-in-more-complete-example-assuming-the-table-includes-owner-and-acl-columns-of-type-text-and-text-respectively">Example 5: Consider row-data in more complete example, assuming the table includes <code>owner</code> and <code>acl</code> columns of type <code>text</code> and <code>text[]</code>, respectively<a class="headerlink" href="#example-5-consider-row-data-in-more-complete-example-assuming-the-table-includes-owner-and-acl-columns-of-type-text-and-text-respectively" title="Permanent link"></a></h3>
+<h3 id="example-5-consider-row-data-in-more-complete-example-assuming-the-table-includes-owner-and-acl-columns-of-type-text-and-text-respectively">Example 5: Consider row-data in more complete example, assuming the table includes <code>owner</code> and <code>acl</code> columns of type <code>text</code> and <code>text[]</code>, respectively<a class="headerlink" href="#example-5-consider-row-data-in-more-complete-example-assuming-the-table-includes-owner-and-acl-columns-of-type-text-and-text-respectively" title="Permanent link">&para;</a></h3>
 <pre><code>-- allow members of group to insert but enforce provenance of owner column
 CREATE POLICY insert_group
 ON my_example
@@ -461,7 +434,7 @@ CREATE POLICY select_owner_acl
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tuning/" class="btn btn-neutral float-right" title="Performance Tuning"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tuning/" class="btn btn-neutral float-right" title="Performance Tuning">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../acls/" class="btn btn-neutral" title="ERMrest Access Control"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -480,7 +453,7 @@ CREATE POLICY select_owner_acl
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -488,7 +461,7 @@ CREATE POLICY select_owner_acl
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -499,6 +472,10 @@ CREATE POLICY select_owner_acl
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
 
 </body>
 </html>

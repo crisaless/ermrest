@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ERMrest Model Resource Naming - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-  
+  <title>ERMrest Model Resource Naming - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/highlight.css">
-
+  <link href="../../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "ERMrest Model Resource Naming";
+    var mkdocs_page_input_path = "api-docs/model/naming.md";
+    var mkdocs_page_url = "/api-docs/model/naming/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js"></script>
   <script src="../../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
-  <script src="../../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,143 +45,101 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
     </ul>
-<li>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
+                <li class="">
+                    
+    <a class="" href="../../">Guide to the ERMrest API</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">ERMrest Model Resource Naming</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ermrest-model-resource-naming">ERMrest Model Resource Naming</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#catalog-names">Catalog Names</a></li>
+        
+            <li><a class="toctree-l4" href="#schemata-names">Schemata Names</a></li>
+        
+            <li><a class="toctree-l4" href="#schema-names">Schema Names</a></li>
+        
+            <li><a class="toctree-l4" href="#table-names">Table Names</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../">Guide to the ERMrest API</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">ERMrest Model Resource Naming</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ermrest-model-resource-naming">ERMrest Model Resource Naming</a></li>
-                
-                    <li><a class="toctree-l4" href="#catalog-names">Catalog Names</a></li>
-                
-                    <li><a class="toctree-l4" href="#schemata-names">Schemata Names</a></li>
-                
-                    <li><a class="toctree-l4" href="#schema-names">Schema Names</a></li>
-                
-                    <li><a class="toctree-l4" href="#table-names">Table Names</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -221,9 +177,9 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ermrest-model-resource-naming">ERMrest Model Resource Naming<a class="headerlink" href="#ermrest-model-resource-naming" title="Permanent link"></a></h1>
+                <h1 id="ermrest-model-resource-naming">ERMrest Model Resource Naming<a class="headerlink" href="#ermrest-model-resource-naming" title="Permanent link">&para;</a></h1>
 <p>Unlike general web architecture, <a href="http://github.com/informatics-isi-edu/ermrest">ERMrest</a> expects clients to understand the URL internal structure and permits (or even encourages) reflection on URL content to understand how one resource name relates to another. To support introspection and management, the data model of a catalog is exposed as a set of model-level resources. These model elements also influence the <a href="../../data/naming/">naming of data resources</a>.</p>
-<h2 id="catalog-names">Catalog Names<a class="headerlink" href="#catalog-names" title="Permanent link"></a></h2>
+<h2 id="catalog-names">Catalog Names<a class="headerlink" href="#catalog-names" title="Permanent link">&para;</a></h2>
 <p>The ERMrest model resources belong to a catalog resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em></li>
@@ -234,7 +190,7 @@
 <li><em>cid</em>: the catalog identifier for one dataset such as <code>42</code>.</li>
 </ul>
 <p>The catalog resource has a representation which provides basic information about it including access control lists.</p>
-<h3 id="catalog-annotations">Catalog Annotations<a class="headerlink" href="#catalog-annotations" title="Permanent link"></a></h3>
+<h3 id="catalog-annotations">Catalog Annotations<a class="headerlink" href="#catalog-annotations" title="Permanent link">&para;</a></h3>
 <p>Each catalog annotation is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/annotation/</code> <em>annotation key</em></li>
@@ -245,7 +201,7 @@
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/annotation</code></li>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/annotation/</code></li>
 </ul>
-<h2 id="schemata-names">Schemata Names<a class="headerlink" href="#schemata-names" title="Permanent link"></a></h2>
+<h2 id="schemata-names">Schemata Names<a class="headerlink" href="#schemata-names" title="Permanent link">&para;</a></h2>
 <p>The ERMrest model resources are named under a root collection of schemata for a particular catalog:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code></li>
@@ -256,19 +212,19 @@
 <li><em>cid</em>: the catalog identifier for one dataset such as <code>42</code>.</li>
 </ul>
 <p>This root schemata resource has a representation which summarizes the entire data model of the catalog as a single document.</p>
-<h2 id="schema-names">Schema Names<a class="headerlink" href="#schema-names" title="Permanent link"></a></h2>
+<h2 id="schema-names">Schema Names<a class="headerlink" href="#schema-names" title="Permanent link">&para;</a></h2>
 <p>Each schema or namespace of tables in a particular catalog is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em></li>
 </ul>
 <p>This named schema resource has a representation which summarizes the data model of all tables qualified by the <em>schema name</em> namespace.</p>
-<h3 id="schema-comments">Schema Comments<a class="headerlink" href="#schema-comments" title="Permanent link"></a></h3>
+<h3 id="schema-comments">Schema Comments<a class="headerlink" href="#schema-comments" title="Permanent link">&para;</a></h3>
 <p>Each schema comment is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/comment</code></li>
 </ul>
 <p>This named resource has a simple representation which is just human readable text in <code>text/plain</code> format.</p>
-<h3 id="schema-annotations">Schema Annotations<a class="headerlink" href="#schema-annotations" title="Permanent link"></a></h3>
+<h3 id="schema-annotations">Schema Annotations<a class="headerlink" href="#schema-annotations" title="Permanent link">&para;</a></h3>
 <p>Each schema annotation is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/annotation/</code> <em>annotation key</em></li>
@@ -279,19 +235,19 @@
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/annotation</code></li>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/annotation/</code></li>
 </ul>
-<h2 id="table-names">Table Names<a class="headerlink" href="#table-names" title="Permanent link"></a></h2>
+<h2 id="table-names">Table Names<a class="headerlink" href="#table-names" title="Permanent link">&para;</a></h2>
 <p>Each table is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em></li>
 </ul>
 <p>This named table resource has a representation which summarizes its data model including columns, keys, and foreign keys. Within data resource names, a table may be referenced by <em>table name</em> only if that name is unique within the catalog or by a fully qualified <em>schema name</em> <code>:</code> <em>table name</em>. Concrete examples of such names might be <code>table1</code> or <code>schema1:table1</code>.</p>
-<h3 id="table-comments">Table Comments<a class="headerlink" href="#table-comments" title="Permanent link"></a></h3>
+<h3 id="table-comments">Table Comments<a class="headerlink" href="#table-comments" title="Permanent link">&para;</a></h3>
 <p>Each table comment is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/comment</code></li>
 </ul>
 <p>This named resource has a simple representation which is just human readable text in <code>text/plain</code> format.</p>
-<h3 id="table-annotations">Table Annotations<a class="headerlink" href="#table-annotations" title="Permanent link"></a></h3>
+<h3 id="table-annotations">Table Annotations<a class="headerlink" href="#table-annotations" title="Permanent link">&para;</a></h3>
 <p>Each table annotation is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/annotation/</code> <em>annotation key</em></li>
@@ -302,7 +258,7 @@
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/annotation</code></li>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/annotation/</code></li>
 </ul>
-<h3 id="column-names">Column Names<a class="headerlink" href="#column-names" title="Permanent link"></a></h3>
+<h3 id="column-names">Column Names<a class="headerlink" href="#column-names" title="Permanent link">&para;</a></h3>
 <p>Each column is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/column/</code> <em>column name</em></li>
@@ -314,13 +270,13 @@
 <li><em>table name</em> : <em>column name</em> when resolving against the model and <em>table name</em> is unique within the catalog;</li>
 <li><em>schema name</em> : <em>table name</em> : <em>column name</em> when resolving against the model and <em>table name</em> might otherwise be ambiguous.</li>
 </ul>
-<h5 id="column-comments">Column Comments<a class="headerlink" href="#column-comments" title="Permanent link"></a></h5>
+<h5 id="column-comments">Column Comments<a class="headerlink" href="#column-comments" title="Permanent link">&para;</a></h5>
 <p>Each column comment is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/column/</code> <em>column name</em> <code>/comment</code></li>
 </ul>
 <p>This named resource has a simple representation which is just human readable text in <code>text/plain</code> format.</p>
-<h5 id="column-annotations">Column Annotations<a class="headerlink" href="#column-annotations" title="Permanent link"></a></h5>
+<h5 id="column-annotations">Column Annotations<a class="headerlink" href="#column-annotations" title="Permanent link">&para;</a></h5>
 <p>Each column annotation is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/column/</code> <em>column name</em> <code>/annotation/</code> <em>annotation key</em></li>
@@ -331,7 +287,7 @@
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/column/</code> <em>column name</em> <code>/annotation</code></li>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/column/</code> <em>column name</em> <code>/annotation/</code></li>
 </ul>
-<h3 id="key-names">Key Names<a class="headerlink" href="#key-names" title="Permanent link"></a></h3>
+<h3 id="key-names">Key Names<a class="headerlink" href="#key-names" title="Permanent link">&para;</a></h3>
 <p>Each (composite) key constraint is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/key/</code> <em>column name</em> <code>,</code> ...</li>
@@ -347,13 +303,13 @@
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/key</code></li>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/key/</code></li>
 </ul>
-<h5 id="key-comments">Key Comments<a class="headerlink" href="#key-comments" title="Permanent link"></a></h5>
+<h5 id="key-comments">Key Comments<a class="headerlink" href="#key-comments" title="Permanent link">&para;</a></h5>
 <p>Each key comment is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/key/</code> <em>column name</em> <code>,</code> ... <code>/comment</code></li>
 </ul>
 <p>This named resource has a simple representation which is just human readable text in <code>text/plain</code> format.</p>
-<h5 id="key-annotations">Key Annotations<a class="headerlink" href="#key-annotations" title="Permanent link"></a></h5>
+<h5 id="key-annotations">Key Annotations<a class="headerlink" href="#key-annotations" title="Permanent link">&para;</a></h5>
 <p>Each key annotation is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/key/</code> <em>column name</em> <code>,</code> ... <code>/annotation/</code> <em>annotation key</em></li>
@@ -364,7 +320,7 @@
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/key/</code> <em>column name</em> <code>,</code> ... <code>/annotation</code></li>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/key/</code> <em>column name</em> <code>,</code> ... <code>/annotation/</code></li>
 </ul>
-<h3 id="foreign-key-names">Foreign Key Names<a class="headerlink" href="#foreign-key-names" title="Permanent link"></a></h3>
+<h3 id="foreign-key-names">Foreign Key Names<a class="headerlink" href="#foreign-key-names" title="Permanent link">&para;</a></h3>
 <p>Each (composite) foreign key constraint is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/foreignkey/</code> <em>column name</em> <code>,</code> ... <code>/reference/</code> <em>table reference</em> <code>/</code> <em>key column</em> <code>,</code> ...</li>
@@ -391,13 +347,13 @@
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/foreignkey/</code> <em>column name</em> <code>,</code> ... <code>/reference/</code> <em>table reference</em></li>
 </ul>
 <p>(While highly unusual, it is possible to express more than one foreign key constraint from the same composite foreign key <em>column name</em> list to different composite key <em>key column</em> lists in the same or different <em>table reference</em> tables.)</p>
-<h5 id="foreign-key-comments">Foreign Key Comments<a class="headerlink" href="#foreign-key-comments" title="Permanent link"></a></h5>
+<h5 id="foreign-key-comments">Foreign Key Comments<a class="headerlink" href="#foreign-key-comments" title="Permanent link">&para;</a></h5>
 <p>Each foreign-key comment is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/foreignkey/</code> <em>column name</em> <code>,</code> ... <code>/reference/</code> <em>table reference</em> <code>/</code> <em>key column</em> <code>,</code> ... <code>/comment</code></li>
 </ul>
 <p>This named resource has a simple representation which is just human readable text in <code>text/plain</code> format.</p>
-<h4 id="foreign-key-annotations">Foreign Key Annotations<a class="headerlink" href="#foreign-key-annotations" title="Permanent link"></a></h4>
+<h4 id="foreign-key-annotations">Foreign Key Annotations<a class="headerlink" href="#foreign-key-annotations" title="Permanent link">&para;</a></h4>
 <p>Each foreign-key annotation is reified as a model-level resource:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/schema/</code> <em>schema name</em> <code>/table/</code> <em>table name</em> <code>/foreignkey/</code> <em>column name</em> <code>,</code> ... <code>/reference/</code> <em>table reference</em> <code>/</code> <em>key column</em> <code>,</code> ... <code>/annotation/</code> <em>annotation key</em></li>
@@ -415,7 +371,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../rest/" class="btn btn-neutral float-right" title="ERMrest Model Operations"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../rest/" class="btn btn-neutral float-right" title="ERMrest Model Operations">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../" class="btn btn-neutral" title="Guide to the ERMrest API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -434,7 +390,7 @@
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -442,7 +398,7 @@
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -453,6 +409,10 @@
       
     </span>
 </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/require.js"></script>
+      <script src="../../../search/search.js"></script>
 
 </body>
 </html>

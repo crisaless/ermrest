@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ERMrest Catalog Operations - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>ERMrest Catalog Operations - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "ERMrest Catalog Operations";
+    var mkdocs_page_input_path = "api-docs/rest-catalog.md";
+    var mkdocs_page_url = "/api-docs/rest-catalog/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,145 +45,103 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../user-doc/install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-doc/acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-doc/row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-doc/tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-doc/annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
     </ul>
-<li>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
+                <li class="">
+                    
+    <a class="" href="../">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data/naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data/rest/">ERMrest Data Operations</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">ERMrest Catalog Operations</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ermrest-catalog-operations">ERMrest Catalog Operations</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#catalog-creation">Catalog Creation</a></li>
+        
+            <li><a class="toctree-l4" href="#catalog-retrieval">Catalog Retrieval</a></li>
+        
+            <li><a class="toctree-l4" href="#catalog-deletion">Catalog Deletion</a></li>
+        
+            <li><a class="toctree-l4" href="#access-control-lists-retrieval">Access Control Lists Retrieval</a></li>
+        
+            <li><a class="toctree-l4" href="#access-control-list-retrieval">Access Control List Retrieval</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../">Guide to the ERMrest API</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../data/naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../data/rest/">ERMrest Data Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">ERMrest Catalog Operations</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ermrest-catalog-operations">ERMrest Catalog Operations</a></li>
-                
-                    <li><a class="toctree-l4" href="#catalog-creation">Catalog Creation</a></li>
-                
-                    <li><a class="toctree-l4" href="#catalog-retrieval">Catalog Retrieval</a></li>
-                
-                    <li><a class="toctree-l4" href="#catalog-deletion">Catalog Deletion</a></li>
-                
-                    <li><a class="toctree-l4" href="#access-control-lists-retrieval">Access Control Lists Retrieval</a></li>
-                
-                    <li><a class="toctree-l4" href="#access-control-list-retrieval">Access Control List Retrieval</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -223,9 +179,9 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ermrest-catalog-operations">ERMrest Catalog Operations<a class="headerlink" href="#ermrest-catalog-operations" title="Permanent link"></a></h1>
+                <h1 id="ermrest-catalog-operations">ERMrest Catalog Operations<a class="headerlink" href="#ermrest-catalog-operations" title="Permanent link">&para;</a></h1>
 <p>In this documentation and examples, the <em>service</em> as described in the previous section on <a href="../model/naming/">model resource naming</a> is assumed to be <code>https://www.example.com/ermrest</code>.</p>
-<h2 id="catalog-creation">Catalog Creation<a class="headerlink" href="#catalog-creation" title="Permanent link"></a></h2>
+<h2 id="catalog-creation">Catalog Creation<a class="headerlink" href="#catalog-creation" title="Permanent link">&para;</a></h2>
 <p>The POST method is used to create an empty catalog:</p>
 <pre><code>POST /ermrest/catalog HTTP/1.1
 Host: www.example.com
@@ -241,7 +197,7 @@ Content-Type: application/json
 - 404 Not Found
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="catalog-retrieval">Catalog Retrieval<a class="headerlink" href="#catalog-retrieval" title="Permanent link"></a></h2>
+<h2 id="catalog-retrieval">Catalog Retrieval<a class="headerlink" href="#catalog-retrieval" title="Permanent link">&para;</a></h2>
 <p>The GET method is used to get a short description of a catalog:</p>
 <pre><code>GET /ermrest/catalog/42 HTTP/1.1
 Host: www.example.com
@@ -256,7 +212,7 @@ Content-Type: application/json
 - 404 Not Found
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="catalog-deletion">Catalog Deletion<a class="headerlink" href="#catalog-deletion" title="Permanent link"></a></h2>
+<h2 id="catalog-deletion">Catalog Deletion<a class="headerlink" href="#catalog-deletion" title="Permanent link">&para;</a></h2>
 <p>The DELETE method is used to delete a catalog and all its content:</p>
 <pre><code>DELETE /ermrest/catalog/42 HTTP/1.1
 Host: www.example.com
@@ -268,7 +224,7 @@ Host: www.example.com
 - 404 Not Found
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="access-control-lists-retrieval">Access Control Lists Retrieval<a class="headerlink" href="#access-control-lists-retrieval" title="Permanent link"></a></h2>
+<h2 id="access-control-lists-retrieval">Access Control Lists Retrieval<a class="headerlink" href="#access-control-lists-retrieval" title="Permanent link">&para;</a></h2>
 <p>The GET method is used to get a summary of all access control (ACL)
 lists:</p>
 <pre><code>GET /ermrest/catalog/42/acl HTTP/1.1
@@ -287,7 +243,7 @@ Content-Type: application/json
 - 404 Not Found
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="access-control-list-retrieval">Access Control List Retrieval<a class="headerlink" href="#access-control-list-retrieval" title="Permanent link"></a></h2>
+<h2 id="access-control-list-retrieval">Access Control List Retrieval<a class="headerlink" href="#access-control-list-retrieval" title="Permanent link">&para;</a></h2>
 <p>The GET method is used to get a summary of a specific access control (ACL)
 list (<code>owner</code> in this example):</p>
 <pre><code>GET /ermrest/catalog/42/acl/owner HTTP/1.1
@@ -328,7 +284,7 @@ Content-Type: application/json
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -336,7 +292,7 @@ Content-Type: application/json
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -345,6 +301,10 @@ Content-Type: application/json
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
 
 </body>
 </html>

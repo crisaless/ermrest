@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ERMrest Data Operations - ERMrest API Documentation</title>
   
-
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-  
+  <title>ERMrest Data Operations - ERMrest API Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/highlight.css">
-
+  <link href="../../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "ERMrest Data Operations";
+    var mkdocs_page_input_path = "api-docs/data/rest.md";
+    var mkdocs_page_url = "/api-docs/data/rest/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js"></script>
   <script src="../../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
-  <script src="../../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -47,153 +45,111 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../..">Welcome to the documentation</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">Welcome to the documentation</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">User Docs</span>
     <ul class="subnav">
-    <li><span>User Docs</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/install-centos7/">Installing on CentOS 7</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/acls/">ERMrest Access Control</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/row-level-security/">Row-Level Authorization</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/tuning/">Performance Tuning</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/annotation/">Model Annotation</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/install-centos7/">Installing on CentOS 7</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/install-ubuntu1204/">Installing on Ubuntu 12.04</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/acls/">ERMrest Access Control</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/row-level-security/">Row-Level Authorization</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/tuning/">Performance Tuning</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/annotation/">Model Annotation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/ermrest-registry-purge/">ermrest-registry-purge</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../user-doc/Chado-patterns/">Chado Vocabulary Patterns</a>
+                </li>
     </ul>
-<li>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">ERMrest API</span>
     <ul class="subnav">
-    <li><span>ERMrest API</span></li>
+                <li class="">
+                    
+    <a class="" href="../../">Guide to the ERMrest API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../model/naming/">ERMrest Model Resource Naming</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../model/rest/">ERMrest Model Operations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../naming/">ERMrest Data Resource Naming</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">ERMrest Data Operations</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ermrest-data-operations">ERMrest Data Operations</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#entity-creation">Entity Creation</a></li>
+        
+            <li><a class="toctree-l4" href="#entity-update">Entity Update</a></li>
+        
+            <li><a class="toctree-l4" href="#entity-retrieval">Entity Retrieval</a></li>
+        
+            <li><a class="toctree-l4" href="#entity-deletion">Entity Deletion</a></li>
+        
+            <li><a class="toctree-l4" href="#attribute-retrieval">Attribute Retrieval</a></li>
+        
+            <li><a class="toctree-l4" href="#attribute-deletion">Attribute Deletion</a></li>
+        
+            <li><a class="toctree-l4" href="#attribute-group-retrieval">Attribute Group Retrieval</a></li>
+        
+            <li><a class="toctree-l4" href="#attribute-group-update">Attribute Group Update</a></li>
+        
+            <li><a class="toctree-l4" href="#aggregate-retrieval">Aggregate Retrieval</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../">Guide to the ERMrest API</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../model/naming/">ERMrest Model Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../model/rest/">ERMrest Model Operations</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../naming/">ERMrest Data Resource Naming</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">ERMrest Data Operations</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#ermrest-data-operations">ERMrest Data Operations</a></li>
-                
-                    <li><a class="toctree-l4" href="#entity-creation">Entity Creation</a></li>
-                
-                    <li><a class="toctree-l4" href="#entity-update">Entity Update</a></li>
-                
-                    <li><a class="toctree-l4" href="#entity-retrieval">Entity Retrieval</a></li>
-                
-                    <li><a class="toctree-l4" href="#entity-deletion">Entity Deletion</a></li>
-                
-                    <li><a class="toctree-l4" href="#attribute-retrieval">Attribute Retrieval</a></li>
-                
-                    <li><a class="toctree-l4" href="#attribute-deletion">Attribute Deletion</a></li>
-                
-                    <li><a class="toctree-l4" href="#attribute-group-retrieval">Attribute Group Retrieval</a></li>
-                
-                    <li><a class="toctree-l4" href="#attribute-group-update">Attribute Group Update</a></li>
-                
-                    <li><a class="toctree-l4" href="#aggregate-retrieval">Aggregate Retrieval</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../rest-catalog/">ERMrest Catalog Operations</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest-catalog/">ERMrest Catalog Operations</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -231,10 +187,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ermrest-data-operations">ERMrest Data Operations<a class="headerlink" href="#ermrest-data-operations" title="Permanent link"></a></h1>
+                <h1 id="ermrest-data-operations">ERMrest Data Operations<a class="headerlink" href="#ermrest-data-operations" title="Permanent link">&para;</a></h1>
 <p>The <a href="http://github.com/informatics-isi-edu/ermrest">ERMrest</a> data operations manipulate tabular data structured according to the existing entity-relationship model already configured as schemata resources in the catalog.</p>
 <p>In the following examples, we illustrate the use of specific data formats. However, content negotiation allows any of the supported tabular data formats to be used in any request or response involving tabular data.</p>
-<h2 id="entity-creation">Entity Creation<a class="headerlink" href="#entity-creation" title="Permanent link"></a></h2>
+<h2 id="entity-creation">Entity Creation<a class="headerlink" href="#entity-creation" title="Permanent link">&para;</a></h2>
 <p>The POST operation is used to create new entity records in a table, using an <code>entity</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/entity/</code> <em>table name</em></li>
@@ -268,7 +224,7 @@ column1,column2
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h3 id="entity-creation-with-defaults">Entity Creation with Defaults<a class="headerlink" href="#entity-creation-with-defaults" title="Permanent link"></a></h3>
+<h3 id="entity-creation-with-defaults">Entity Creation with Defaults<a class="headerlink" href="#entity-creation-with-defaults" title="Permanent link">&para;</a></h3>
 <p>The POST operation is also used to create new entity records in a table where some values are assigned default values, using an entity resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/entity/</code> <em>table name</em> <code>?defaults=</code> <em>column name</em></li>
@@ -304,7 +260,7 @@ column1,column2
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="entity-update">Entity Update<a class="headerlink" href="#entity-update" title="Permanent link"></a></h2>
+<h2 id="entity-update">Entity Update<a class="headerlink" href="#entity-update" title="Permanent link">&para;</a></h2>
 <p>The PUT operation is used to update entity records in a table, using an <code>entity</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/entity/</code> <em>table name</em></li>
@@ -338,7 +294,7 @@ column1,column2
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="entity-retrieval">Entity Retrieval<a class="headerlink" href="#entity-retrieval" title="Permanent link"></a></h2>
+<h2 id="entity-retrieval">Entity Retrieval<a class="headerlink" href="#entity-retrieval" title="Permanent link">&para;</a></h2>
 <p>The GET operation is used to retrieve entity records, using an <code>entity</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/entity/</code> <em>path</em></li>
@@ -363,7 +319,7 @@ column1,column2
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="entity-deletion">Entity Deletion<a class="headerlink" href="#entity-deletion" title="Permanent link"></a></h2>
+<h2 id="entity-deletion">Entity Deletion<a class="headerlink" href="#entity-deletion" title="Permanent link">&para;</a></h2>
 <p>The DELETE operation is used to delete entity records, using an <code>entity</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/entity/</code> <em>path</em></li>
@@ -380,7 +336,7 @@ Host: www.example.com
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="attribute-retrieval">Attribute Retrieval<a class="headerlink" href="#attribute-retrieval" title="Permanent link"></a></h2>
+<h2 id="attribute-retrieval">Attribute Retrieval<a class="headerlink" href="#attribute-retrieval" title="Permanent link">&para;</a></h2>
 <p>The GET operation is used to retrieve projected attribute records, using an <code>attribute</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/attribute/</code> <em>path</em> <code>/</code> <em>projection</em> <code>,</code> ...</li>
@@ -406,7 +362,7 @@ x,y
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="attribute-deletion">Attribute Deletion<a class="headerlink" href="#attribute-deletion" title="Permanent link"></a></h2>
+<h2 id="attribute-deletion">Attribute Deletion<a class="headerlink" href="#attribute-deletion" title="Permanent link">&para;</a></h2>
 <p>The DELETE operation is used to clear attributes to their default value (usually NULL), using an <code>attribute</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/attribute/</code> <em>path</em> <code>/</code> <em>target</em> <code>,</code> ...</li>
@@ -423,7 +379,7 @@ Host: www.example.com
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="attribute-group-retrieval">Attribute Group Retrieval<a class="headerlink" href="#attribute-group-retrieval" title="Permanent link"></a></h2>
+<h2 id="attribute-group-retrieval">Attribute Group Retrieval<a class="headerlink" href="#attribute-group-retrieval" title="Permanent link">&para;</a></h2>
 <p>The GET operation is used to retrieve projected attribute group records, using an <code>attributegroup</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/attributegroup/</code> <em>path</em> <code>/</code> <em>group key</em> <code>,</code> ... </li>
@@ -448,7 +404,7 @@ baz,1,4
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h2 id="attribute-group-update">Attribute Group Update<a class="headerlink" href="#attribute-group-update" title="Permanent link"></a></h2>
+<h2 id="attribute-group-update">Attribute Group Update<a class="headerlink" href="#attribute-group-update" title="Permanent link">&para;</a></h2>
 <p>The PUT operation is used to update attributes in a table, using an <code>attributegroup</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/attributegroup/</code> <em>path</em> <code>/</code> <em>group key</em> <code>,</code> ... <code>;</code> <em>target</em> <code>,</code> ...</li>
@@ -482,7 +438,7 @@ column1,column2
 - 409 Conflict
 - 403 Forbidden
 - 401 Unauthorized</p>
-<h3 id="attribute-group-update-with-renaming">Attribute Group Update with Renaming<a class="headerlink" href="#attribute-group-update-with-renaming" title="Permanent link"></a></h3>
+<h3 id="attribute-group-update-with-renaming">Attribute Group Update with Renaming<a class="headerlink" href="#attribute-group-update-with-renaming" title="Permanent link">&para;</a></h3>
 <p>As with retrieval of attribute groups, update supports renaming of stored columns within the external representation, so that it is even possible to rewrite the key columns as in this example:</p>
 <pre><code>PUT /ermrest/catalog/42/attributegroup/table1/original:=column1;replacement:=column1 HTTP/1.1
 Host: www.example.com
@@ -504,7 +460,7 @@ foo,foo-prime
 bar,bar-prime
 baz,baz-prime
 </code></pre>
-<h2 id="aggregate-retrieval">Aggregate Retrieval<a class="headerlink" href="#aggregate-retrieval" title="Permanent link"></a></h2>
+<h2 id="aggregate-retrieval">Aggregate Retrieval<a class="headerlink" href="#aggregate-retrieval" title="Permanent link">&para;</a></h2>
 <p>The GET operation is used to retrieve projected aggregates, using an <code>aggregate</code> resource data name of the form:</p>
 <ul>
 <li><em>service</em> <code>/catalog/</code> <em>cid</em> <code>/aggregate/</code> <em>path</em> <code>/</code> <em>projection</em> <code>,</code> ...</li>
@@ -533,7 +489,7 @@ y,x,z
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../rest-catalog/" class="btn btn-neutral float-right" title="ERMrest Catalog Operations"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../rest-catalog/" class="btn btn-neutral float-right" title="ERMrest Catalog Operations">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../naming/" class="btn btn-neutral" title="ERMrest Data Resource Naming"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -552,7 +508,7 @@ y,x,z
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -560,7 +516,7 @@ y,x,z
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -571,6 +527,10 @@ y,x,z
       
     </span>
 </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/require.js"></script>
+      <script src="../../../search/search.js"></script>
 
 </body>
 </html>
