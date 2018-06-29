@@ -42,64 +42,64 @@ stable release, i.e. Postgres 9.5 at time of writing.
 
    For CentOS 7, use:
 
-   ```
-   # dnf install https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
-   ```
+```
+# dnf install https://download.postgresql.org/pub/repos/yum/9.5/redhat/rhel-7-x86_64/pgdg-centos95-9.5-2.noarch.rpm
+```
    For Fedora 23, use:
    
-   ```
-   # dnf install https://download.postgresql.org/pub/repos/yum/9.5/fedora/fedora-23-x86_64/pgdg-fedora95-9.5-3.noarch.rpm
-   ```
+```
+# dnf install https://download.postgresql.org/pub/repos/yum/9.5/fedora/fedora-23-x86_64/pgdg-fedora95-9.5-3.noarch.rpm
+```
 
 2. Install the required packages. You may first want to uninstall any
    conflicting packages if you had default PostgreSQL packages installed with
    your base CentOS installation.
 
-   ```
-   # dnf install policycoreutils-python
-   # dnf remove postgresql{,-server}
-   # dnf install postgresql95{,-server,-docs,-contrib}
-   ```
+```
+# dnf install policycoreutils-python
+# dnf remove postgresql{,-server}
+# dnf install postgresql95{,-server,-docs,-contrib}
+```
 
 3. Add local labeling rules to [SE-Linux] since the files are not where CentOS
    expects them.
 
-  ```
-  # semanage fcontext --add --type postgresql_tmp_t "/tmp/\.s\.PGSQL\.[0-9]+.*"
-  # semanage fcontext --add --type postgresql_exec_t "/usr/pgsql-9\.[0-9]/bin/(initdb|postgres)"
-  # semanage fcontext --add --type postgresql_log_t "/var/lib/pgsql/9\.[0-9]/pgstartup\.log"
-  # semanage fcontext --add --type postgresql_db_t "/var/lib/pgsql/9\.[0-9]/data(/.*)?"
-  # restorecon -rv /var/lib/pgsql/
-  # restorecon -rv /usr/pgsql-9.*
-  ```
+```nohighlight
+# semanage fcontext --add --type postgresql_tmp_t "/tmp/\.s\.PGSQL\.[0-9]+.*"
+# semanage fcontext --add --type postgresql_exec_t "/usr/pgsql-9\.[0-9]/bin/(initdb|postgres)"
+# semanage fcontext --add --type postgresql_log_t "/var/lib/pgsql/9\.[0-9]/pgstartup\.log"
+# semanage fcontext --add --type postgresql_db_t "/var/lib/pgsql/9\.[0-9]/data(/.*)?"
+# restorecon -rv /var/lib/pgsql/
+# restorecon -rv /usr/pgsql-9.*
+```
 
 4. Initialize and enable the `postgresql` service.
 
-   ```
-   # /usr/pgsql-9.5/bin/postgresql95-setup initdb
-   # systemctl enable postgresql-9.5.service
-   # systemctl start postgresql-9.5.service
-   ```
+```
+# /usr/pgsql-9.5/bin/postgresql95-setup initdb
+# systemctl enable postgresql-9.5.service
+# systemctl start postgresql-9.5.service
+```
 
 5. Verify that postmaster is running under the right SE-Linux context
    `postgresql_t` (though process IDs will vary of course).
 
-   ```
-   # ps -eZ | grep postgres
-   system_u:system_r:unconfined_service_t:s0 22188 ? 00:00:00 postgres
-   system_u:system_r:unconfined_service_t:s0 22189 ? 00:00:00 postgres
-   system_u:system_r:unconfined_service_t:s0 22191 ? 00:00:00 postgres
-   system_u:system_r:unconfined_service_t:s0 22192 ? 00:00:00 postgres
-   system_u:system_r:unconfined_service_t:s0 22193 ? 00:00:00 postgres
-   system_u:system_r:unconfined_service_t:s0 22194 ? 00:00:00 postgres
-   system_u:system_r:unconfined_service_t:s0 22195 ? 00:00:00 postgres
-   ```
+```
+# ps -eZ | grep postgres
+system_u:system_r:unconfined_service_t:s0 22188 ? 00:00:00 postgres
+system_u:system_r:unconfined_service_t:s0 22189 ? 00:00:00 postgres
+system_u:system_r:unconfined_service_t:s0 22191 ? 00:00:00 postgres
+system_u:system_r:unconfined_service_t:s0 22192 ? 00:00:00 postgres
+system_u:system_r:unconfined_service_t:s0 22193 ? 00:00:00 postgres
+system_u:system_r:unconfined_service_t:s0 22194 ? 00:00:00 postgres
+system_u:system_r:unconfined_service_t:s0 22195 ? 00:00:00 postgres
+```
 
 6. Permit network connections to the database service.
 
-   ```
-   # setsebool -P httpd_can_network_connect_db=1
-   ```
+```
+# setsebool -P httpd_can_network_connect_db=1
+```
 
 ### Other Prerequisites
 
@@ -121,17 +121,17 @@ If `python-webpy` does not exist in the package repo, install it with `pip`.
 
 1. Download WebAuthn.
 
-   ```
-   $ git clone https://github.com/informatics-isi-edu/webauthn.git webauthn
-   ```
+```
+$ git clone https://github.com/informatics-isi-edu/webauthn.git webauthn
+```
 
 2. From the WebAuthn source directory, run the installation and deployment scripts.
 
-   ```
-   # cd webauthn
-   # make install
-   # make deploy
-   ```
+```
+# cd webauthn
+# make install
+# make deploy
+```
 
    This will install the WebAuthn Python module under
    `/usr/lib/python2*/site-packages/webauthn2/`. It will also create a
@@ -145,16 +145,16 @@ After installing the prerequisite, you are ready to install ERMrest.
 
 1. Download ERMrest.
 
-   ```
-   $ git clone https://github.com/informatics-isi-edu/ermrest.git ermrest
-   ```
+```
+$ git clone https://github.com/informatics-isi-edu/ermrest.git ermrest
+```
 
 2. From the ERMrest source directory, run the installation script.
 
-   ```
-   # cd ermrest
-   # make install [PLATFORM=centos7]
-   ```
+```
+# cd ermrest
+# make install [PLATFORM=centos7]
+```
 
    The install script:
    - installs the ERMrest Python module under
@@ -164,9 +164,9 @@ After installing the prerequisite, you are ready to install ERMrest.
 
 3. From the same directory, run the deployment script.
 
-   ```
-   # make deploy [PLATFORM=centos7]
-   ```
+```
+# make deploy [PLATFORM=centos7]
+```
 
    The deployment script:
    - runs install target
@@ -180,9 +180,9 @@ After installing the prerequisite, you are ready to install ERMrest.
 
 4. Restart the Apache httpd service
 
-   ```
-   # service httpd restart
-   ```
+```
+# service httpd restart
+```
 
 ## Updating ERMrest
 
@@ -226,28 +226,28 @@ against an internal database of usernames and passwords and attributes.
 
 1. Switch to the `webauthn` user in order to perform the  configuration steps.
 
-   ```
-   # su - webauthn
-   ```
+```
+# su - webauthn
+```
 
 2. Setup an administrator account.
 
-   ```
-   $ webauthn2-manage adduser root
-   $ webauthn2-manage addattr admin
-   $ webauthn2-manage assign root admin
-   $ webauthn2-manage passwd root 'your password here'
-   ```
+```
+$ webauthn2-manage adduser root
+$ webauthn2-manage addattr admin
+$ webauthn2-manage assign root admin
+$ webauthn2-manage passwd root 'your password here'
+```
 
    The `admin` attribute has special meaning only because it appears in
    `~webauthn/webauthn2_config.json` in some ACLs.
 
 3. Setup a user account.
 
-   ```
-   $ webauthn2-manage adduser myuser
-   $ webauthn2-manage passwd myuser 'your password here'
-   ```
+```
+$ webauthn2-manage adduser myuser
+$ webauthn2-manage passwd myuser 'your password here'
+```
 
 ## Create Your First Catalog
 
@@ -258,43 +258,43 @@ any local user.
 1. Login to ERMrest using an 'admin' account previously created with
    `ermrest-webauthn-manage`. Do not include the single quotes in the parameter. The following script will create a cookie file named `cookie`.
 
-   ```
-   $ curl -k -c cookie -d username=root -d password='your password here' https://$(hostname)/ermrest/authn/session
-   ```
+```
+$ curl -k -c cookie -d username=root -d password='your password here' https://$(hostname)/ermrest/authn/session
+```
 
 2. Create a catalog.
 
-   ```
-   $ curl -k -b cookie -XPOST https://$(hostname)/ermrest/catalog/
-   ```
+```
+$ curl -k -b cookie -XPOST https://$(hostname)/ermrest/catalog/
+```
 
 3. Inspect the catalog metadata. (Readable indentation added here.)
 
-   ```
-   $ curl -k -b cookie -H "Accept: application/json" \
-   > https://$(hostname)/ermrest/catalog/1
-   {
-     "meta": [
-       {"k": "owner", "v": "testuser"},
-       {"k": "write_user", "v": "testuser"},
-       {"k": "read_user", "v": "testuser"},
-       {"k": "schema_write_user", "v": "testuser"},
-       {"k": "content_read_user", "v": "testuser"},
-       {"k": "content_write_user", "v": "testuser"}],
-     "id": "1"
-   }
-   ```
+```
+$ curl -k -b cookie -H "Accept: application/json" \
+> https://$(hostname)/ermrest/catalog/1
+{
+ "meta": [
+   {"k": "owner", "v": "testuser"},
+   {"k": "write_user", "v": "testuser"},
+   {"k": "read_user", "v": "testuser"},
+   {"k": "schema_write_user", "v": "testuser"},
+   {"k": "content_read_user", "v": "testuser"},
+   {"k": "content_write_user", "v": "testuser"}],
+ "id": "1"
+}
+```
 
 4. Inspect the catalog schema.
 
-   ```
-   $ curl -k -b cookie -H "Accept: application/json" \
-   > https://$(hostname)/ermrest/catalog/1/schema
-   {
-      "schemas": {
-      ...
-   }
-   ```
+```
+$ curl -k -b cookie -H "Accept: application/json" \
+> https://$(hostname)/ermrest/catalog/1/schema
+{
+  "schemas": {
+  ...
+}
+```
 
 ## Firewall
 

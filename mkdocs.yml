@@ -5,7 +5,7 @@ extra_css:
   - css/extra.css
 
 
-pages:
+pages: #adjust the following as needed and appropriate for the repository
 - Welcome to the documentation: index.md
 - User Docs:
     - Installing on CentOS 7: user-doc/install-centos7.md
